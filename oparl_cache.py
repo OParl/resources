@@ -179,7 +179,7 @@ class OParlCache:
 
         for i in external_list_iterator:
             if self.validate:
-                valid, messages = validate_object(i)
+                valid, messages = validate_object(i, schema=self.schema)
                 if not valid:
                     for j in messages:
                         collected_messages[j] += 1
