@@ -17,69 +17,20 @@ import json
 import sys
 
 from urllib.parse import urlparse
-
-
-def get_cached(url):
-    """
-    Fetches any URL using a simple file cache for known URLs.
-
-    :param url: str
-    :return: str
-    """
-    parsed = urlparse(url)
-
-    # Unique filepath for caching requests to this url
-    # Note that os.path.join doesn't work here due to leading slashes
-    filepath = os.path.abspath("cache/" + parsed.netloc + "".join(parsed[2:])) + ".json"
-
-    if os.path.isfile(filepath):
-        with open(filepath) as f:
-            return f.read()
-
-    response = requests.get(url)
-    response.raise_for_status()
-
-    # Not cached? Let's cache it
-    if not os.path.exists(os.path.dirname(filepath)):
-        os.makedirs(os.path.dirname(filepath))
-    with open(filepath, 'w') as f:
-        f.write(response.text)
-
-    # Show we're not stalled
-    sys.stdout.write("x")
-    sys.stdout.flush()
-
-    return response.text
-
-
-def external_list(url):
-    """
-    Yields all objects of an external list.
-
-    :param url: url of the external list
-    :yields: Iterator over all objects in the external list
-    """
-    while 1:
-        page = json.loads(get_cached(url))
-        for i in page["data"]:
-            yield i
-
-        if "next" in page["links"].keys():
-            url = page["links"]["next"]
-        else:
-            break
+from oparl_cache import OParlCache
 
 
 def main():
-    entrypoint = "https://www.muenchen-transparent.de/oparl/v1.0/list/body/"
+    entrypoint = "https://www.muenchen-transparent.de/oparl/v1.0/list/body"
+    cacher = OParlCache(entrypoint, "/home/konsti/oparl/schema", "/home/konsti/cache", True)
 
-    bodies = external_list(entrypoint)
-    next(bodies)  # Remove the Stadtrat
+    bodies = cacher.get_from_cache(entrypoint)
+    bodies.pop(0)  # Remove the Stadtrat
 
     bezirkausschuesse_stats = []
 
     for ba in bodies:
-        meetings = external_list(ba["meeting"])
+        meetings = cacher.get_from_cache(ba["meeting"])
 
         total = 0
         good = 0
@@ -101,7 +52,7 @@ def main():
             total += 1
 
             for fileurl in meeting["auxiliaryFile"]:
-                file = json.loads(get_cached(fileurl))
+                file = cacher.get_from_cache(fileurl)
                 name = file["name"]
                 good_words = ["protokol", "Protokoll", "Niederschrift", "Prot"]
                 bad_words = ["Einladung", "Nachtrag", "nachtrag", "Anwesenheitsliste", "Tagesordnung", "TO ", "to-", "Ladung"]

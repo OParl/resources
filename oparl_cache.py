@@ -31,7 +31,7 @@ from threading import Lock
 from concurrent.futures.thread import ThreadPoolExecutor
 from itertools import islice
 
-from validate_examples import validate_object
+from validate import validate_object
 
 
 class OParlCache:
@@ -247,6 +247,7 @@ class OParlCache:
         :return:
         """
         if not os.path.isfile(self.get_path_from_url(url)):
+            print(self.get_path_from_url(url))
             return None
 
         with open(self.get_path_from_url(url)) as f:
