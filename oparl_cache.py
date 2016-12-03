@@ -4,18 +4,18 @@ OParl file cache
 
 Downloads the contents of an OParl API into a file based cache, allowing easy retieval and incremental cache updates
 
-## Usage
-Create an `OParlCache` object with the OParl entrypoint. Use the load_to_cache method to download the contents of the
-API. You can the retrieve objects using get_from_cache(). Update by calling `load_to_cache`. Note that embedded objects
-are stripped out and replaced by their id, by which you can retrieve them from the cache.
+# Usage
+Create an `OParlCache` object with the url of the OParl entrypoint. Use the `load_to_cache()` method to download the
+contents of the API. You can the retrieve objects using `get_from_cache(id)`. Update by calling `load_to_cache()`.
+Note that embedded objects are stripped out and replaced by their id, by which you can retrieve them. 
 
-You can also use the script as a command line tool. Use "--help" for usage information.
+You can also use this script as a command line tool. Use "--help" for usage information.
 
-## Implementation
-The cache folder contains one "cache_info.json" with an entry for each entrypoint. Each entry list the external lists
-with the date the list was last updated. All OParl entities are stored in a file under the cache folder whose path is
-computed from its id by removing the double slash after the protocol and removing the OParl filter parameters. For
-external lists only the ids of the elements are stored in the file.
+# Implementation
+The cache folder contains a file called "cache_status.json" with an entry for each known OParl server. An entry
+contains the external lists of the server with the date of last update of that list. All OParl entities are stored in a
+file in the cache folder whose path is a reformatted version of the url. For external lists only the ids of the elements
+are stored.
 """
 
 import argparse
@@ -39,7 +39,7 @@ class OParlCache:
         self.schema = {}
         self.cachedir = cachedir
         self.entrypoint = entrypoint
-        self.cache_info_file = os.path.join(self.cachedir, "cache_info.json")
+        self.cache_status_file = os.path.join(self.cachedir, "cache_status.json")
         self.external_lists = []
         self.object_pairs_hook = OrderedDict
         self.validate = validate
@@ -52,16 +52,16 @@ class OParlCache:
             with open(os.path.join(schemadir, schemafile)) as file:
                 self.schema[os.path.splitext(schemafile)[0]] = self.json_load_hooked(file)
 
-        if os.path.isfile(self.cache_info_file):
-            with open(self.cache_info_file) as f:
-                cache_info = self.json_load_hooked(f)
-            for i in cache_info:
+        if os.path.isfile(self.cache_status_file):
+            with open(self.cache_status_file) as f:
+                cache_status = self.json_load_hooked(f)
+            for i in cache_status:
                 if i["entrypoint"] == self.entrypoint:
                     self.external_lists = i["external_lists"]
                     break
         else:
-            os.makedirs(os.path.dirname(self.cache_info_file), exist_ok=True)
-            with open(self.cache_info_file, "w") as f:
+            os.makedirs(os.path.dirname(self.cache_status_file), exist_ok=True)
+            with open(self.cache_status_file, "w") as f:
                 json.dump(self.json_loads_hooked("[]"), f)
 
     @staticmethod
@@ -81,8 +81,10 @@ class OParlCache:
         self.futures.append(self.thread_pool.submit(self.parse_external_list, element["url"], element["last_update"]))
         self.external_lists_lock.release()
 
-    def get_path_from_url(self, url_raw):
+    def url_to_path(self, url_raw):
         """
+        Takes an url as string and returns ap path in the format <cachedir>/<scheme>:<host>[:<port>][/<path>].json
+
         :param url_raw:
         :return: the path to where the corresponding url is cached
         """
@@ -100,7 +102,7 @@ class OParlCache:
         if url.fragment != "":
             url_options += "#" + url.fragment
 
-        return os.path.join(self.cachedir, url.scheme + "::" + url.netloc, url.path[1:] + url_options + ".json")
+        return os.path.join(self.cachedir, url.scheme + ":" + url.netloc, url.path[1:] + url_options + ".json")
 
     def download_external_list(self, url):
         """
@@ -123,7 +125,7 @@ class OParlCache:
                 return
 
     def write_to_cache(self, url, cacheable):
-        filepath = self.get_path_from_url(url)
+        filepath = self.url_to_path(url)
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
         with open(filepath, 'w') as f:
             json.dump(cacheable, f, indent=4)
@@ -187,7 +189,7 @@ class OParlCache:
             self.parse_object(i)
 
         if last_update:
-            with open(self.get_path_from_url(url)) as f:
+            with open(self.url_to_path(url)) as f:
                 old_urls = self.json_load_hooked(f)
         else:
             old_urls = []
@@ -223,21 +225,21 @@ class OParlCache:
         self.thread_pool.shutdown()
 
     def save(self):
-        with open(self.cache_info_file) as f:
-            cache_info = self.json_load_hooked(f)
+        with open(self.cache_status_file) as f:
+            cache_status = self.json_load_hooked(f)
 
-        for i in cache_info:
+        for i in cache_status:
             if i["entrypoint"] == self.entrypoint:
                 i["external_lists"] = self.external_lists
                 break
         else:
-            cache_info.append({
+            cache_status.append({
                 "entrypoint": self.entrypoint,
                 "external_lists": self.external_lists
             })
 
-        with open(self.cache_info_file, "w") as f:
-            json.dump(cache_info, f, indent=4)
+        with open(self.cache_status_file, "w") as f:
+            json.dump(cache_status, f, indent=4)
 
     def get_from_cache(self, url):
         """
@@ -246,16 +248,16 @@ class OParlCache:
         :param url:
         :return:
         """
-        if not os.path.isfile(self.get_path_from_url(url)):
-            print(self.get_path_from_url(url))
+        if not os.path.isfile(self.url_to_path(url)):
+            print(self.url_to_path(url))
             return None
 
-        with open(self.get_path_from_url(url)) as f:
+        with open(self.url_to_path(url)) as f:
             loaded = self.json_load_hooked(f)
 
         if type(loaded) == list:
             for i, j in enumerate(loaded):
-                with open(self.get_path_from_url(j)) as f:
+                with open(self.url_to_path(j)) as f:
                     loaded[i] = self.json_load_hooked(f)
 
         return loaded
