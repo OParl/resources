@@ -7,7 +7,17 @@ This is meant to be very simple, so the cache won't see any update on the
 server (yet). If you want to include updates from the server, delete the cache
 folder.
 
-NOTE: This is not a scientific study but an example for using the OParl API, so
+## Usage
+
+Clone https://github.com/oparl/spec. Then run
+
+```
+python3 protokolle.py --schema /path/to/oparl/schema --cache /some/path/for/the/cache
+```
+
+## NOTE
+
+This is not a scientific study but an example for using the OParl API, so
 the numbers are a bit sloppy.
 """
 import argparse
