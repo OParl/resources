@@ -31,7 +31,10 @@ from threading import Lock
 from concurrent.futures.thread import ThreadPoolExecutor
 from itertools import islice
 
-from validate import validate_object
+try:
+    from validate import validate_object
+except ImportError:
+    print("Warning: validate.py not found")
 
 
 class OParlCache:

@@ -1,1 +1,0 @@
-/home/konsti/oparl/scripts/validate.py

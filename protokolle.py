@@ -10,21 +10,21 @@ folder.
 NOTE: This is not a scientific study but an example for using the OParl API, so
 the numbers are a bit sloppy.
 """
+import argparse
 
-import os
-import requests
-import json
-import sys
-
-from urllib.parse import urlparse
 from oparl_cache import OParlCache
 
 
 def main():
-    entrypoint = "https://www.muenchen-transparent.de/oparl/v1.0/list/body"
-    cacher = OParlCache(entrypoint, "/home/konsti/oparl/schema", "/home/konsti/cache", True)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--entrypoint", default="https://www.muenchen-transparent.de/oparl/v1.0/list/body")
+    parser.add_argument("--schema", default="/home/konsti/oparl/schema")
+    parser.add_argument("--cache", default="/home/konsti/cache-python")
+    args = parser.parse_args()
 
-    bodies = cacher.get_from_cache(entrypoint)
+    cacher = OParlCache(args.entrypoint, args.schema, args.cache, True)
+
+    bodies = cacher.get_from_cache(args.entrypoint)
     bodies.pop(0)  # Remove the Stadtrat
 
     bezirkausschuesse_stats = []
@@ -55,7 +55,8 @@ def main():
                 file = cacher.get_from_cache(fileurl)
                 name = file["name"]
                 good_words = ["protokol", "Protokoll", "Niederschrift", "Prot"]
-                bad_words = ["Einladung", "Nachtrag", "nachtrag", "Anwesenheitsliste", "Tagesordnung", "TO ", "to-", "Ladung"]
+                bad_words = ["Einladung", "Nachtrag", "nachtrag", "Anwesenheitsliste", "Tagesordnung", "TO ", "to-",
+                             "Ladung"]
                 if any(x in name for x in good_words):  # good
                     good += 1
                     break
@@ -69,13 +70,13 @@ def main():
                 bad += 1
 
         assert total == good + bad + undecided
-        line = [ba["shortName"], total, good, bad, undecided, int(good * 100 / total)]
+        line = [ba["shortName"][3:], total, good, bad, undecided, int(good * 100 / total)]
         bezirkausschuesse_stats.append(line)
 
-    format_string = "{:5} | {:5} | {:4} | {:3} | {:4} | {:4}"
+    format_string = "{:3} | {:5} | {:4} | {:3} | {:4} | {:4}"
     print(format_string.format("BA", "Total", "Good", "Bad", "Ugly", "Score"))
     print("-" * 41)
-    format_string += "%" # The score is in percent
+    format_string += "%"  # The score is in percent
     for line in bezirkausschuesse_stats:
         print(format_string.format(*line))
 
