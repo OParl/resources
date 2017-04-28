@@ -1,2 +1,4 @@
 # protokolle.py cache
 cache/
+# Compiled java classes
+*.class
