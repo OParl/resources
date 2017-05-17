@@ -1,0 +1,17 @@
+- title: OParl Entwicklerportal
+  url: https://dev.oparl.org/api/v1/system
+  description: Das OParl-Entwicklerportal stellt eine Referenz- und Testimplementierung eines OParl-Servers bereit.
+
+- title: München Transparent
+  url: https://www.muenchen-transparent.de/oparl/v1.0
+  description: München Transparent - das alternative RIS von München.
+
+- title: Kleine Anfragen
+  url: https://api.kleineanfragen.de/oparl/v1/
+  description: Kleine Anfragen bietet Informationen zu kleinen Anfragen aus der gesamten Bundesrepublik
+
+- title: Politik bei Uns
+  url: https://politik-bei-uns.de/oparl
+
+- title: Landkreis Ludwigslust-Parchim
+  url: https://www.lwl-pch.sitzung-online.de/oi/oparl/1.0/system.asp
