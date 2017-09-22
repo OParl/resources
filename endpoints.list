@@ -1,0 +1,27 @@
+; List of OParl-Endpoints, line separated
+https://dev.oparl.org/api/oparl/v1/system
+http://demosessionoparl.itebo.de/system
+https://www.lwl-pch.sitzung-online.de/oi/oparl/1.0/system.asp
+https://politik-bei-uns.de/oparl
+https://api.kleineanfragen.de/oparl/v1/
+https://www.muenchen-transparent.de/oparl/v1.0
+https://sdnetrim.kdvz-frechen.de/rim4210/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4500/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4780/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4410/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4490/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4520/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4220/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4230/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4240/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4550/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4770/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4250/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4260/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4270/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4280/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4580/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4160/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4170/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4180/webservice/oparl/v1/system
+https://sdnetrim.kdvz-frechen.de/rim4420/webservice/oparl/v1/system
