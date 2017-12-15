@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#********************************************************************
+# ********************************************************************
 # Copyright 2017, Stefan "eFrane" Graupner
 #
 # This file is part of OParl's extra resources.
@@ -18,71 +18,55 @@
 # You should have received a copy of the GNU Lesser General Public
 # License along with liboparl.
 # If not, see http://www.gnu.org/licenses/.
-#*********************************************************************
+# *********************************************************************
 
-"""
-Example for using OParl in Python 3
-"""
 import gi
+
 gi.require_version('OParl', '0.2')
 from gi.repository import OParl
 
-import urllib.request
-from yaml import dump
+import requests
+import yaml
 
-def resolve(_, url, status):
+
+def resolve(_, url):
     try:
-        req = urllib.request.urlopen(url)
-        status= req.getcode()
-        data = req.read()
-        return data.decode('utf-8')
-    except urllib.error.HTTPError as e:
-        status = e.getcode()
-        return None
+        response = requests.get(url)
+        return OParl.ResolveUrlResult(resolved_data=response.text, success=True, status_code=response.status_code)
     except Exception as e:
-        status = -1
-        return None
+        print("ARRR", e)
+        return OParl.ResolveUrlResult(resolved_data=None, success=False, status_code=-1)
 
-client = OParl.Client()
-client.connect("resolve_url", resolve)
 
-endpoints = []
+def main():
+    endpoints = []
 
-with open('endpoints.list', 'r') as endpoints_list:
-    lines = endpoints_list.readlines()
+    with open('endpoints.list') as endpoints_list:
+        lines = endpoints_list.readlines()
+
     for endpoint_uri in lines:
-        if endpoint_uri[0] == ';':
+        endpoint_uri = endpoint_uri.strip()
+        if endpoint_uri == "" or endpoint_uri[0] == ';':
             # ";" marks comments
             continue
+        print("Processing: ", endpoint_uri)
 
-        try:
-            endpoint_uri = endpoint_uri.strip()
-            system = client.open(endpoint_uri)
+        client = OParl.Client()
+        client.connect("resolve_url", resolve)
 
-            endpoint = {
-                'name': system.get_name(),
-                'url': endpoint_uri,
-                'product': system.get_product(),
-                'vendor': system.get_vendor(),
-                'contact': {
-                    'name': system.get_contact_name(),
-                    'email': system.get_contact_email(),
-                },
-                'license': system.get_license(),
-                'oparl_version': system.get_oparl_version(),
-            }
-        except:
-            print("Failed to read data from: {}".format(endpoint_uri))
+        system = client.open(endpoint_uri)
 
-        try:
-            endpoint['number_of_bodies'] = len(system.get_body())
-        except:
-            endpoint['number_of_bodies'] = -1
+        endpoint = {
+            'titel': system.get_name(),
+            'url': system.get_id(),
+        }
 
         endpoints.append(endpoint)
 
-print(dump(endpoints))
+    with open('endpoints.yml', 'w') as endpoint_db:
+        # todo: dump to yml
+        endpoint_db.write(yaml.dump(endpoints))
 
-with open('endpoints.yml') as endpoint_db:
-    # todo: dump to yml
-    pass
+
+if __name__ == '__main__':
+    main()

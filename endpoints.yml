@@ -1,21 +1,25 @@
-- title: OParl Entwicklerportal
-  url: https://dev.oparl.org/api/oparl/v1/system
-  description: Das OParl-Entwicklerportal stellt eine Referenz- und Testimplementierung eines OParl-Servers bereit.
-
-- title: München Transparent
-  url: https://www.muenchen-transparent.de/oparl/v1.0
-  description: München Transparent - das alternative RIS von München.
-
-- title: Kleine Anfragen
-  url: https://api.kleineanfragen.de/oparl/v1/
-  description: Kleine Anfragen bietet Informationen zu kleinen Anfragen aus der gesamten Bundesrepublik.
-
-- title: Politik bei Uns
-  url: https://politik-bei-uns.de/oparl
-
-- title: Landkreis Ludwigslust-Parchim
-  url: https://www.lwl-pch.sitzung-online.de/oi/oparl/1.0/system.asp
-  
-- title: Demosystem SOMACOS
-  url: http://demosessionoparl.itebo.de/system
-  
+- {titel: OParl Demoserver, url: 'https://dev.oparl.org/api/oparl/v1/system/1'}
+- {titel: Landkreis LUP, url: 'https://www.lwl-pch.sitzung-online.de/oi/oparl/1.0/system.asp'}
+- {titel: OKF-DE OParl Service, url: 'https://1-0.oparl.politik-bei-uns.de/oparl'}
+- {titel: kleineAnfragen, url: 'https://api.kleineanfragen.de/oparl/v1'}
+- {titel: "M\u0102\u017Anchen Transparent", url: 'https://www.muenchen-transparent.de/oparl/v1.0'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4210/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4500/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4780/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4410/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4490/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4520/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4220/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4230/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4240/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4550/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4770/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4250/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4260/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4270/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4280/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4580/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4160/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4170/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4180/webservice/oparl/v1/system'}
+- {titel: Ratsinformationssystem, url: 'https://sdnetrim.kdvz-frechen.de/rim4420/webservice/oparl/v1/system'}

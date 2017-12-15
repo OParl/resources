@@ -1,6 +1,5 @@
 ; List of OParl-Endpoints, line separated
 https://dev.oparl.org/api/oparl/v1/system
-http://demosessionoparl.itebo.de/system
 https://www.lwl-pch.sitzung-online.de/oi/oparl/1.0/system.asp
 https://politik-bei-uns.de/oparl
 https://api.kleineanfragen.de/oparl/v1/
