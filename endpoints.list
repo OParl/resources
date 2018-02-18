@@ -1,9 +1,13 @@
 ; List of OParl-Endpoints, line separated
-https://dev.oparl.org/api/oparl/v1/system
-https://www.lwl-pch.sitzung-online.de/oi/oparl/1.0/system.asp
+
+; Inofficial
 https://politik-bei-uns.de/oparl
+https://dev.oparl.org/api/oparl/v1/system
 https://api.kleineanfragen.de/oparl/v1/
 https://www.muenchen-transparent.de/oparl/v1.0
+
+; Sternberg Sessionnet endpoints hosted by the kdvz frechen
+
 https://sdnetrim.kdvz-frechen.de/rim4210/webservice/oparl/v1/system
 https://sdnetrim.kdvz-frechen.de/rim4500/webservice/oparl/v1/system
 https://sdnetrim.kdvz-frechen.de/rim4780/webservice/oparl/v1/system
@@ -24,3 +28,14 @@ https://sdnetrim.kdvz-frechen.de/rim4160/webservice/oparl/v1/system
 https://sdnetrim.kdvz-frechen.de/rim4170/webservice/oparl/v1/system
 https://sdnetrim.kdvz-frechen.de/rim4180/webservice/oparl/v1/system
 https://sdnetrim.kdvz-frechen.de/rim4420/webservice/oparl/v1/system
+
+; Further Sternberg Sessionnet enpoints
+
+https://ris.stadt-willich.de/webservice/oparl/v1/system
+https://stemwede.ratsinfomanagement.net/webservice/oparl/v1/system
+https://leopoldshoehe.ratsinfomanagement.net/webservice/oparl/v1/system
+
+; cc-egov Allris endpoints
+
+https://www.lwl-pch.sitzung-online.de/oi/oparl/1.0/system.asp
+http://ratsinfo.erkelenz.de/bi/oparl/1.0/system.asp
