@@ -1,4 +1,8 @@
-- {titel: OParl Mirror, url: 'https://mirror.oparl.org/system'}
-- {titel: Politik bei Uns - Aufbereitete Daten, url: 'https://oparl.politik-bei-uns.de/system'}
-- {titel: kleineAnfragen, url: 'https://api.kleineanfragen.de/oparl/v1'}
-- {titel: "M\u0102\u017Anchen Transparent", url: 'https://www.muenchen-transparent.de/oparl/v1.0'}
+- title: OParl Mirror
+  url: https://mirror.oparl.org/system
+- title: Politik bei Uns - Aufbereitete Daten
+  url: https://oparl.politik-bei-uns.de/system
+- title: Kleine Anfragen
+  url: https://api.kleineanfragen.de/oparl/v1
+- title: München Transparent
+  url: https://www.muenchen-transparent.de/oparl/v1.0
