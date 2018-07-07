@@ -1,8 +1,26 @@
 - title: OParl Mirror
   url: https://mirror.oparl.org/system
+  description: |
+    Das OParl-Projekt sammelt die Daten aller Kommunen mit OParl-Schnittstelle ein,
+    korrigiert eine Hand voll Fehler und stellt sie auf einem schnellen Server
+    wieder zur Verfügung.
 - title: Politik bei Uns - Aufbereitete Daten
   url: https://oparl.politik-bei-uns.de/system
-- title: Kleine Anfragen
+  description: |
+    Politik bei uns bereitet die Daten auf vielfältige Weise auf:
+
+    - Automatisierte Georeferenzierung auf Basis von OpenStreetMap-Daten
+    - Extrahieren aller Texte aus den PDFs
+    - OCR-Behandlung der PDFs falls notwendig
+    - Thumbnail-Generierung in verschiedenen Größen
+- title: kleineAnfragen
   url: https://api.kleineanfragen.de/oparl/v1
+  description: |
+    Mit kleinen Anfragen können Abgeordnete in Parlamenten ihrer jeweiligen Regierung
+    Fragen stellen, die von dieser zeitnah beantwortet und veröffentlicht werden müssen.
 - title: München Transparent
   url: https://www.muenchen-transparent.de/oparl/v1.0
+  description: |
+    München Transparent ist ein gemeinnütziges Projekt welches die Ratsarbeit
+    der Stadt München bürgerfreundlich aufbereitet und sie in diesem Zuge
+    auch als OParl-Endpunkt bereit stellt.
