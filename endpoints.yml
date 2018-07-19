@@ -31,29 +31,68 @@
 - title:
   url: http://ratsinfo.erkelenz.de/bi/oparl/1.0/system.asp
 
-- title: KDVZ Frechen
-  urls:
-  - https://sdnetrim.kdvz-frechen.de/rim4210/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4500/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4780/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4410/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4490/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4520/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4220/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4230/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4240/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4550/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4770/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4250/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4260/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4270/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4280/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4580/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4160/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4170/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4180/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4420/webservice/oparl/v1/system
-  - https://sdnetrim.kdvz-frechen.de/rim4510/webservice/oparl/v1/system
+- title: "KDVZ Frechen: Gemeinde Aldenhoven"
+  url: https://sdnetrim.kdvz-frechen.de/rim4210/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4500/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4780/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4410/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4490/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4520/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4220/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4230/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4240/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4550/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4770/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4250/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4260/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4270/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4280/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4580/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4160/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4170/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4180/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4420/webservice/oparl/v1/system
+
+- title: "KDVZ Frechen: "
+  url: https://sdnetrim.kdvz-frechen.de/rim4510/webservice/oparl/v1/system
 
 - title: Stadt Willich
   url: https://ris.stadt-willich.de/webservice/oparl/v1/system
