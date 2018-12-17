@@ -102,3 +102,12 @@
 
 - title: Landkreis Ludwigslust-Parchim
   url: https://www.lwl-pch.sitzung-online.de/oi/oparl/1.0/system.asp
+
+- title: Gemeinde Schwalmtal
+  url: https://ris.schwalmtal.de/webservice/oparl/v1/system
+  
+- title: Stadt Leipzig
+  url: https://ratsinfo.leipzig.de/bi/oparl/1.0/system.asp
+  
+- title: Stadt Rees
+  url: https://sessionnet-oparl.krz.de/oparl/bodies/5205
