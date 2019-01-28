@@ -109,6 +109,12 @@
 - title: Stadt Leipzig
   url: https://ratsinfo.leipzig.de/bi/oparl/1.0/system.asp
   
+- title: Stadt Krefeld
+  url: https://ris.krefeld.de/webservice/oparl/v1/body/1/
+
+- title: Stadt Bedburg
+  url: https://sdnetrim.kdvz-frechen.de/rim4780/webservice/oparl/v1/body/1
+
 # This endpoint is currently broken
 #- title: Stadt Rees
 #  url: https://sessionnet-oparl.krz.de/oparl/bodies/5205
