@@ -109,5 +109,6 @@
 - title: Stadt Leipzig
   url: https://ratsinfo.leipzig.de/bi/oparl/1.0/system.asp
   
+# This endpoint is currently broken
 - title: Stadt Rees
   url: https://sessionnet-oparl.krz.de/oparl/bodies/5205
