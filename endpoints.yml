@@ -126,6 +126,9 @@
   
 - title: Stadt Bergheim
   url: https://sdnetrim.kdvz-frechen.de/rim4800/webservice/oparl/v1.1/system
+  
+- title: Stadt Bonn
+  url: https://www.bonn.sitzung-online.de/public/oparl/system
 
 # This endpoint is currently broken
 #- title: Stadt Rees
