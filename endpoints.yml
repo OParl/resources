@@ -4,6 +4,7 @@
     Das OParl-Projekt sammelt die Daten aller Kommunen mit OParl-Schnittstelle ein,
     korrigiert eine Hand voll Fehler und stellt sie auf einem schnellen Server
     wieder zur Verfügung.
+
 - title: Politik bei Uns - Aufbereitete Daten
   url: https://oparl.politik-bei-uns.de/system
   description: |
@@ -13,11 +14,13 @@
     - Extrahieren aller Texte aus den PDFs
     - OCR-Behandlung der PDFs falls notwendig
     - Thumbnail-Generierung in verschiedenen Größen
+
 - title: kleineAnfragen
   url: https://api.kleineanfragen.de/oparl/v1
   description: |
     Mit kleinen Anfragen können Abgeordnete in Parlamenten ihrer jeweiligen Regierung
     Fragen stellen, die von dieser zeitnah beantwortet und veröffentlicht werden müssen.
+
 - title: München Transparent
   url: https://www.muenchen-transparent.de/oparl/v1.0
   description: |
@@ -26,111 +29,178 @@
     auch als OParl-Endpunkt bereit stellt.
 
 - title: "Stadt Erkelenz"
+  osm: 67333
+  wd: Q7025
   url: http://ratsinfo.erkelenz.de/bi/oparl/1.0/system.asp
 
 - title: "KDVZ Frechen: Gemeinde Aldenhoven"
+  osm: 9941812
+  wd: Q199968
   url: https://sdnetrim.kdvz-frechen.de/rim4210/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Stadt Bad Münstereifel"
+  osm: 158145
+  wd: Q241450
   url: https://sdnetrim.kdvz-frechen.de/rim4500/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Stadt Bedburg"
+  osm: 168465
+  wd: Q245292
   url: https://sdnetrim.kdvz-frechen.de/rim4780/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Stadt Brühl"
+  osm: 168481
+  wd: Q7036
   url: https://sdnetrim.kdvz-frechen.de/rim4410/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Stadt Erftstadt"
+  osm: 168482
+  wd: Q4195
   url: https://sdnetrim.kdvz-frechen.de/rim4490/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Kreisverwaltung Euskirchen"
+  osm: 62555
+  wd: Q6280
   url: https://sdnetrim.kdvz-frechen.de/rim4520/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Gemeinde Hürtgenwald"
+  osm: 163315
+  wd: Q199974
   url: https://sdnetrim.kdvz-frechen.de/rim4220/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Gemeinde Inden"
+  osm: 162463
+  wd: Q199977
   url: https://sdnetrim.kdvz-frechen.de/rim4230/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Stadt Jülich"
+  osm: 158408
+  wd: Q16045
   url: https://sdnetrim.kdvz-frechen.de/rim4240/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Gemeinde Kall"
+  osm: 158158
+  wd: Q240887
   url: https://sdnetrim.kdvz-frechen.de/rim4550/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Kolpingstadt Kerpen"
+  osm: 168483
+  wd: Q3959
   url: https://sdnetrim.kdvz-frechen.de/rim4770/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Gemeinde Kreuzau"
+  osm: 163314
+  wd: Q199988
   url: https://sdnetrim.kdvz-frechen.de/rim4250/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Gemeinde Langerwehe"
+  osm: 162550
+  wd: Q200018
   url: https://sdnetrim.kdvz-frechen.de/rim4260/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Stadt Linnich"
+  osm: 158394
+  wd: Q200122
   url: https://sdnetrim.kdvz-frechen.de/rim4270/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Gemeinde Merzenich"
+  osm: 163310
+  wd: Q200044
   url: https://sdnetrim.kdvz-frechen.de/rim4280/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Gemeinde Nettersheim"
+  osm: 158159
+  wd: Q6219
   url: https://sdnetrim.kdvz-frechen.de/rim4580/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Gemeinde Nörvenich"
+  osm: 163311
+  wd: Q200068
   url: https://sdnetrim.kdvz-frechen.de/rim4160/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Gemeinde Titz"
+  osm: 158411
+  wd: Q200076
   url: https://sdnetrim.kdvz-frechen.de/rim4170/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Gemeinde Vettweiß"
+  osm: 163313
+  wd: Q200087
   url: https://sdnetrim.kdvz-frechen.de/rim4180/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Stadt Wesseling"
+  osm: 3314803
+  wd: Q14956
   url: https://sdnetrim.kdvz-frechen.de/rim4420/webservice/oparl/v1.0/system
 
 - title: "KDVZ Frechen: Gemeinde Weilerswist"
+  osm: 2806005
+  wd: Q240039
   url: https://sdnetrim.kdvz-frechen.de/rim4510/webservice/oparl/v1.0/system
 
 - title: Stadt Willich
+  osm: 88547
+  wd: Q4171
   url: https://ris.stadt-willich.de/webservice/oparl/v1.0/system
 
 - title: Leopoldshöhe
+  osm: 142651
+  wd: Q242385
   url: https://leopoldshoehe.ratsinfomanagement.net/webservice/oparl/v1.0/system
 
 - title: Steinhagen
+  osm: 138730
+  wd: Q225002
   url: https://ratsinfo.steinhagen.de/webservice/oparl/v1.0/system
 
 - title: Landkreis Ludwigslust-Parchim
+  osm: 1739381
+  wd: Q2905
   url: https://www.lwl-pch.sitzung-online.de/oi/oparl/1.0/system.asp
 
 - title: Gemeinde Schwalmtal
+  osm: 88529
+  wd: Q163917
   url: https://ris.schwalmtal.de/webservice/oparl/v1.0/system
 
 - title: Stadt Leipzig
+  osm: 62649
+  wd: Q2079
   url: https://ratsinfo.leipzig.de/bi/oparl/1.0/system.asp
 
 - title: Stadt Krefeld
+  osm: 62748
+  wd: Q2805
   url: https://ris.krefeld.de/webservice/oparl/v1.0/system
 
-- title: Stadt Bedburg
-  url: https://sdnetrim.kdvz-frechen.de/rim4780/webservice/oparl/v1.0/system
-
 - title: Landkreis Märkisch-Oderland
+  osm: 318248
+  wd: Q6181
   url: https://ratsinfo-online.net/landkreis-mol-bi/oparl/1.0/system.asp
 
 - title: Stadt Hagen
+  osm: 1800297
+  wd: Q2871
   url: https://www.hagen.de/buergerinfo/oparl/1.0/system.asp
 
 - title: Gemeinde Langenberg
+  osm: 78566
+  wd: Q225055
   url: https://sdnetrim.kdvz-frechen.de/rim4883/webservice/oparl/v1.1/system
 
 - title: Stadt Bergheim
+  osm: 168469
+  wd: Q3989
   url: https://sdnetrim.kdvz-frechen.de/rim4800/webservice/oparl/v1.1/system
 
 - title: Stadt Bonn
+  osm: 62508
+  wd: Q586
   url: https://www.bonn.sitzung-online.de/public/oparl/system
 
 - title: Stadt Goch
+  osm: 167969
+  wd: Q16006
   url: https://ris.goch.de/webservice/oparl/v1/system
 
 - title: Regionalverband Ruhr
