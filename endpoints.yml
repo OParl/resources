@@ -206,6 +206,11 @@
 - title: Regionalverband Ruhr
   url: https://rvr-online.gremien.info/oparl
 
+- title: Stadt Wuppertal
+  osm: 62478
+  wd: Q2107
+  url: https://oparl.wuppertal.de/oparl/system
+
 # This endpoint is currently broken
 #- title: Stadt Rees
 #  url: https://sessionnet-oparl.krz.de/oparl/bodies/5205
