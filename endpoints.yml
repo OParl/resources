@@ -211,6 +211,11 @@
   wd: Q2107
   url: https://oparl.wuppertal.de/oparl/system
 
+- title: Landeshauptstadt Düsseldorf
+  osm: 62539
+  wd: Q1718
+  url: https://ris-oparl.itk-rheinland.de/Oparl/system
+
 # This endpoint is currently broken
 #- title: Stadt Rees
 #  url: https://sessionnet-oparl.krz.de/oparl/bodies/5205
