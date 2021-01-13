@@ -15,11 +15,13 @@
     - OCR-Behandlung der PDFs falls notwendig
     - Thumbnail-Generierung in verschiedenen Größen
 
-- title: kleineAnfragen
-  url: https://api.kleineanfragen.de/oparl/v1
-  description: |
-    Mit kleinen Anfragen können Abgeordnete in Parlamenten ihrer jeweiligen Regierung
-    Fragen stellen, die von dieser zeitnah beantwortet und veröffentlicht werden müssen.
+# > kleineAnfragen wurde nach 5 Jahren Stillstand bei den Parlamenten zum 31.12.2020 abgeschaltet
+# > https://kleineanfragen.de/info/stilllegung
+# - title: kleineAnfragen
+#   url: https://api.kleineanfragen.de/oparl/v1
+#   description: |
+#     Mit kleinen Anfragen können Abgeordnete in Parlamenten ihrer jeweiligen Regierung
+#     Fragen stellen, die von dieser zeitnah beantwortet und veröffentlicht werden müssen.
 
 - title: München Transparent
   url: https://www.muenchen-transparent.de/oparl/v1.0
@@ -215,6 +217,16 @@
   osm: 62539
   wd: Q1718
   url: https://ris-oparl.itk-rheinland.de/Oparl/system
+
+- title: Stadt Freiburg
+  osm: 62768
+  wd: Q2833
+  url: https://ris.freiburg.de/oparl
+
+- title: Stadt Ulm
+  osm: 62495
+  wd: Q3012
+  url: https://buergerinfo.ulm.de/oparl/system
 
 # This endpoint is currently broken
 #- title: Stadt Rees
