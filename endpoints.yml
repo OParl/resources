@@ -228,6 +228,7 @@
   wd: Q3012
   url: https://buergerinfo.ulm.de/oparl/system
 
-# This endpoint is currently broken
-#- title: Stadt Rees
-#  url: https://sessionnet-oparl.krz.de/oparl/bodies/5205
+- title: Stadt Rees
+  osm: 167944
+  wd: Q243474
+  url: https://sessionnet-oparl.krz.de/oparl/bodies/5205
