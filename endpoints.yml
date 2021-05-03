@@ -232,3 +232,8 @@
   osm: 167944
   wd: Q243474
   url: https://sessionnet-oparl.krz.de/oparl/bodies/5205
+  
+- title: Stadt Köln
+  osm: 62578
+  wd: Q365
+  url: https://buergerinfo.stadt-koeln.de/oparl/system
