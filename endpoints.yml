@@ -237,3 +237,8 @@
   osm: 62578
   wd: Q365
   url: https://buergerinfo.stadt-koeln.de/oparl/system
+
+- title: Stadt Münster
+  osm: 62591
+  wd: Q2742
+  url: https://oparl.stadt-muenster.de/system
