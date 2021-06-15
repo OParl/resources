@@ -242,3 +242,23 @@
   osm: 62591
   wd: Q2742
   url: https://oparl.stadt-muenster.de/system
+
+- title: Stadt Aachen
+  osm: 62564
+  wd: Q1017
+  url: https://ratsinfo.aachen.de/bi/oparl/1.0/bodies.asp?id=1
+
+- title: Kreis Viersen
+  osm: 62489
+  wd: Q6249
+  url: https://kis.kreis-viersen.de/webservice/oparl/v1.0/body/1
+
+- title: Stadt Pulheim
+  osm: 168464
+  wd: Q4113
+  url: https://sdnetrim.kdvz-frechen.de/rim4350/webservice/oparl/v1.0/body/1
+
+- title: Gemeinde Stemwede
+  osm: 145304
+  wd: Q183052
+  url: https://stemwede.ratsinfomanagement.net/webservice/oparl/v1.0/body/1
