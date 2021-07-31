@@ -262,3 +262,8 @@
   osm: 145304
   wd: Q183052
   url: https://stemwede.ratsinfomanagement.net/webservice/oparl/v1.0/body/1
+
+- title: Gemeinde Ladbergen
+  osm: 155443
+  wd: Q181877
+  url: https://ladbergen.ratsinfomanagement.net/webservice/oparl/v1.1/system
