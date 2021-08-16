@@ -267,3 +267,8 @@
   osm: 155443
   wd: Q181877
   url: https://ladbergen.ratsinfomanagement.net/webservice/oparl/v1.1/system
+
+- title: Stadt Lahr/Schwarzwald
+  osm: 453002
+  wd: Q7039
+  url: https://lahr.ratsinfomanagement.net/webservice/oparl/v1.0/body 
