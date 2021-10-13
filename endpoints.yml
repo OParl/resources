@@ -272,3 +272,13 @@
   osm: 453002
   wd: Q7039
   url: https://lahr.ratsinfomanagement.net/webservice/oparl/v1.1/system 
+
+- title: Stadt Dresden
+  osm: 191645
+  wd: Q1731
+  url: https://oparl.dresden.de/bodies/0001
+  
+- title: Stadt Castrop-Rauxel
+  osm: ‪56664‬
+  wd: Q3898
+  url: https://castroprauxel.gremien.info/oparl
