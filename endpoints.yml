@@ -3,31 +3,31 @@
   description: |
     Das OParl-Projekt sammelt die Daten aller Kommunen mit OParl-Schnittstelle ein,
     korrigiert eine Hand voll Fehler und stellt sie auf einem schnellen Server
-    wieder zur Verfügung.
+    wieder zur Verfugung.
 
 - title: Politik bei Uns - Aufbereitete Daten
   url: https://oparl.politik-bei-uns.de/system
   description: |
-    Politik bei uns bereitet die Daten auf vielfältige Weise auf:
+    Politik bei uns bereitet die Daten auf vielfaltige Weise auf:
 
     - Automatisierte Georeferenzierung auf Basis von OpenStreetMap-Daten
     - Extrahieren aller Texte aus den PDFs
     - OCR-Behandlung der PDFs falls notwendig
-    - Thumbnail-Generierung in verschiedenen Größen
+    - Thumbnail-Generierung in verschiedenen Grossen
 
 # > kleineAnfragen wurde nach 5 Jahren Stillstand bei den Parlamenten zum 31.12.2020 abgeschaltet
 # > https://kleineanfragen.de/info/stilllegung
 # - title: kleineAnfragen
 #   url: https://api.kleineanfragen.de/oparl/v1
 #   description: |
-#     Mit kleinen Anfragen können Abgeordnete in Parlamenten ihrer jeweiligen Regierung
-#     Fragen stellen, die von dieser zeitnah beantwortet und veröffentlicht werden müssen.
+#     Mit kleinen Anfragen konnen Abgeordnete in Parlamenten ihrer jeweiligen Regierung
+#     Fragen stellen, die von dieser zeitnah beantwortet und veroffentlicht werden mussen.
 
-- title: München Transparent
+- title: Munchen Transparent
   url: https://www.muenchen-transparent.de/oparl/v1.0
   description: |
-    München Transparent ist ein gemeinnütziges Projekt welches die Ratsarbeit
-    der Stadt München bürgerfreundlich aufbereitet und sie in diesem Zuge
+    Munchen Transparent ist ein gemeinnutziges Projekt welches die Ratsarbeit
+    der Stadt Munchen burgerfreundlich aufbereitet und sie in diesem Zuge
     auch als OParl-Endpunkt bereit stellt.
 
 - title: "Stadt Erkelenz"
@@ -40,7 +40,7 @@
   wd: Q199968
   url: https://sdnetrim.kdvz-frechen.de/rim4210/webservice/oparl/v1.0/system
 
-- title: "KDVZ Frechen: Stadt Bad Münstereifel"
+- title: "KDVZ Frechen: Stadt Bad Munstereifel"
   osm: 158145
   wd: Q241450
   url: https://sdnetrim.kdvz-frechen.de/rim4500/webservice/oparl/v1.0/system
@@ -50,7 +50,7 @@
   wd: Q245292
   url: https://sdnetrim.kdvz-frechen.de/rim4780/webservice/oparl/v1.0/system
 
-- title: "KDVZ Frechen: Stadt Brühl"
+- title: "KDVZ Frechen: Stadt Bruhl"
   osm: 168481
   wd: Q7036
   url: https://sdnetrim.kdvz-frechen.de/rim4410/webservice/oparl/v1.0/system
@@ -65,7 +65,7 @@
   wd: Q6280
   url: https://sdnetrim.kdvz-frechen.de/rim4520/webservice/oparl/v1.0/system
 
-- title: "KDVZ Frechen: Gemeinde Hürtgenwald"
+- title: "KDVZ Frechen: Gemeinde Hurtgenwald"
   osm: 163315
   wd: Q199974
   url: https://sdnetrim.kdvz-frechen.de/rim4220/webservice/oparl/v1.0/system
@@ -75,7 +75,7 @@
   wd: Q199977
   url: https://sdnetrim.kdvz-frechen.de/rim4230/webservice/oparl/v1.0/system
 
-- title: "KDVZ Frechen: Stadt Jülich"
+- title: "KDVZ Frechen: Stadt Julich"
   osm: 158408
   wd: Q16045
   url: https://sdnetrim.kdvz-frechen.de/rim4240/webservice/oparl/v1.0/system
@@ -115,7 +115,7 @@
   wd: Q6219
   url: https://sdnetrim.kdvz-frechen.de/rim4580/webservice/oparl/v1.0/system
 
-- title: "KDVZ Frechen: Gemeinde Nörvenich"
+- title: "KDVZ Frechen: Gemeinde Norvenich"
   osm: 163311
   wd: Q200068
   url: https://sdnetrim.kdvz-frechen.de/rim4160/webservice/oparl/v1.0/system
@@ -125,7 +125,7 @@
   wd: Q200076
   url: https://sdnetrim.kdvz-frechen.de/rim4170/webservice/oparl/v1.0/system
 
-- title: "KDVZ Frechen: Gemeinde Vettweiß"
+- title: "KDVZ Frechen: Gemeinde Vettweiss"
   osm: 163313
   wd: Q200087
   url: https://sdnetrim.kdvz-frechen.de/rim4180/webservice/oparl/v1.0/system
@@ -145,7 +145,7 @@
   wd: Q4171
   url: https://ris.stadt-willich.de/webservice/oparl/v1.0/system
 
-- title: Leopoldshöhe
+- title: Leopoldshohe
   osm: 142651
   wd: Q242385
   url: https://leopoldshoehe.ratsinfomanagement.net/webservice/oparl/v1.0/system
@@ -175,7 +175,7 @@
   wd: Q2805
   url: https://ris.krefeld.de/webservice/oparl/v1.0/system
 
-- title: Landkreis Märkisch-Oderland
+- title: Landkreis Markisch-Oderland
   osm: 318248
   wd: Q6181
   url: https://ratsinfo-online.net/landkreis-mol-bi/oparl/1.0/system.asp
@@ -213,7 +213,7 @@
   wd: Q2107
   url: https://oparl.wuppertal.de/oparl/system
 
-- title: Landeshauptstadt Düsseldorf
+- title: Landeshauptstadt Dusseldorf
   osm: 62539
   wd: Q1718
   url: https://ris-oparl.itk-rheinland.de/Oparl/system
@@ -233,12 +233,12 @@
   wd: Q243474
   url: https://sessionnet-oparl.krz.de/oparl/bodies/5205
   
-- title: Stadt Köln
+- title: Stadt Koln
   osm: 62578
   wd: Q365
   url: https://buergerinfo.stadt-koeln.de/oparl/system
 
-- title: Stadt Münster
+- title: Stadt Munster
   osm: 62591
   wd: Q2742
   url: https://oparl.stadt-muenster.de/system
@@ -279,6 +279,6 @@
   url: https://oparl.dresden.de/system
   
 - title: Stadt Castrop-Rauxel
-  osm: ‪56664‬
+  osm: 56664
   wd: Q3898
   url: https://castroprauxel.gremien.info/oparl
