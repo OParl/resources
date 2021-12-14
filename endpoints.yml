@@ -283,7 +283,27 @@
   wd: Q3898
   url: https://castroprauxel.gremien.info/oparl
 
-- title: Bezirk Reinickendorf
+- title: Berlin Reinickendorf
   osm: 16334
   wd: Q158876
   url: https://www.sitzungsdienst-reinickendorf.de/oi/oparl/1.0/system.asp
+
+- title: Berlin Lichtenberg
+  osm: 404554
+  wd: Q1007979
+  url: https://www.sitzungsdienst-lichtenberg.de/oi/oparl/1.0/system.asp
+
+- title: Berlin Marzahn-Hellersdorf
+  osm: 164712
+  wd: Q119284
+  url: https://www.sitzungsdienst-marzahn-hellersdorf.de/oi/oparl/1.0/system.asp
+
+- title: Berlin Pankow
+  osm: 164723
+  wd: Q163012
+  url: https://www.sitzungsdienst-pankow.de/oi/oparl/1.0/system.asp
+
+- title: Berlin Treptow-Köpenick
+  osm: 55754
+  wd: Q158089
+  url: https://www.sitzungsdienst-treptow-koepenick.de/oi/oparl/1.0/system.asp
