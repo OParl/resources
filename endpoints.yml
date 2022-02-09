@@ -23,7 +23,7 @@
 #     Mit kleinen Anfragen konnen Abgeordnete in Parlamenten ihrer jeweiligen Regierung
 #     Fragen stellen, die von dieser zeitnah beantwortet und veroffentlicht werden mussen.
 
-- title: Munchen Transparent
+- title: München Transparent
   url: https://www.muenchen-transparent.de/oparl/v1.0
   description: |
     Munchen Transparent ist ein gemeinnutziges Projekt welches die Ratsarbeit
@@ -238,7 +238,7 @@
   wd: Q365
   url: https://buergerinfo.stadt-koeln.de/oparl/system
 
-- title: Stadt Munster
+- title: Stadt Münster
   osm: 62591
   wd: Q2742
   url: https://oparl.stadt-muenster.de/system
