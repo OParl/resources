@@ -537,6 +537,11 @@
   wd: Q158089
   url: https://www.sitzungsdienst-treptow-koepenick.de/oi/oparl/1.0/system.asp
 
+- title: Berlin Steglitz-Zehlendorf
+  osm: 55734
+  wd: Q158064
+  url: https://www.sitzungsdienst-steglitz-zehlendorf.de/oi/oparl/1.0/system.asp
+
 - title: Stadt Braunschweig
   osm: 62531
   wd: Q2773
