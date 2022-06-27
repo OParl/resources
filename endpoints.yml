@@ -132,7 +132,7 @@
 - title: Gemeinde Lohfelden
   osm: 1115032
   wd: Q562032
-  url: https://lohfelden.ratsinfomanagement.net/webservice/oparl/v1.0/system
+  url: https://lohfelden.ratsinfomanagement.net/webservice/oparl/v1.1/system
 
 - title: Stadt Lahr/Schwarzwald
   osm: 453002
@@ -151,7 +151,7 @@
 - title: Stadt Gronau
   osm: 162865
   wd: Q6924
-  url: https://gronau.ratsinfomanagement.net/webservice/oparl/v1.0/system
+  url: https://gronau.ratsinfomanagement.net/webservice/oparl/v1.1/system
 
 - title: Spenge
   url: https://spenge.ratsinfomanagement.net/webservice/oparl/v1.1/system
@@ -161,17 +161,17 @@
 - title: Stadt Emsdetten
   osm: 155714
   wd: Q31995364
-  url: https://emsdetten.ratsinfomanagement.net/webservice/oparl/v1.0/system
+  url: https://emsdetten.ratsinfomanagement.net/webservice/oparl/v1.1/system
 
 - title: Gemeinde Stemwede
   osm: 145304
   wd: Q183052
-  url: https://stemwede.ratsinfomanagement.net/webservice/oparl/v1.0/system
+  url: https://stemwede.ratsinfomanagement.net/webservice/oparl/v1.1/system
 
 - title: Stadt Enger
   osm: 147441
   wd: Q53901
-  url: https://enger.ratsinfomanagement.net/webservice/oparl/v1.0/system
+  url: https://enger.ratsinfomanagement.net/webservice/oparl/v1.1/system
 
 - title: Samtgemeinde Sögel
   url: http://soegel.ratsinfomanagement.net/webservice/oparl/v1.1/system
@@ -180,7 +180,7 @@
 - title: Stadt Bad Pyrmont
   osm: 1184314
   wd: Q556352
-  url: https://badpyrmont.ratsinfomanagement.net/webservice/oparl/v1.0/system
+  url: https://badpyrmont.ratsinfomanagement.net/webservice/oparl/v1.1/system
 
 - title: Vlotho
   url: https://vlotho.ratsinfomanagement.net/webservice/oparl/v1.1/system
@@ -190,12 +190,12 @@
 - title: Gemeinde Hiddenhausen
   osm: 147443
   wd: Q53908
-  url: https://hiddenhausen.ratsinfomanagement.net/webservice/oparl/v1.0/system
+  url: https://hiddenhausen.ratsinfomanagement.net/webservice/oparl/v1.1/system
 
 - title: Gemeinde Rödinghausen
   osm: 147275
   wd: Q53913
-  url: https://roedinghausen.ratsinfomanagement.net/webservice/oparl/v1.0/system
+  url: https://roedinghausen.ratsinfomanagement.net/webservice/oparl/v1.1/system
 
 - title: Wallenhorst
   url: https://wallenhorst.ratsinfomanagement.net/webservice/oparl/v1.1/system
@@ -205,7 +205,7 @@
 - title: Leopoldshohe
   osm: 142651
   wd: Q242385
-  url: https://leopoldshoehe.ratsinfomanagement.net/webservice/oparl/v1.0/system
+  url: https://leopoldshoehe.ratsinfomanagement.net/webservice/oparl/v1.1/system
 
 - title: Rahden
   url: http://rahden.ratsinfomanagement.net/webservice/oparl/v1.1/system
@@ -214,7 +214,7 @@
 - title: Stadt Herford
   osm: 146654
   wd: Q3971
-  url: https://herford.ratsinfomanagement.net/webservice/oparl/v1.0/system
+  url: https://herford.ratsinfomanagement.net/webservice/oparl/v1.1/system
 
 - title: Velen
   url: https://velen.ratsinfomanagement.net/webservice/oparl/v1.1/system
@@ -223,7 +223,7 @@
 - title: Gemeinde Kirchlengern
   osm: 12577782
   wd: Q53911
-  url: https://kirchlengern.ratsinfomanagement.net/webservice/oparl/v1.0/system
+  url: https://kirchlengern.ratsinfomanagement.net/webservice/oparl/v1.1/system
 
 - title: Kronberg im Taunus
   url: https://kronberg.ratsinfomanagement.net/webservice/oparl/v1.1/system
@@ -402,7 +402,7 @@
 - title: Stadt Willich
   osm: 88547
   wd: Q4171
-  url: https://ris.stadt-willich.de/webservice/oparl/v1.0/system
+  url: https://ris.stadt-willich.de/webservice/oparl/v1.1/system
 
 - title: Steinhagen
   osm: 138730
@@ -412,7 +412,7 @@
 - title: Gemeinde Schwalmtal
   osm: 88529
   wd: Q163917
-  url: https://ris.schwalmtal.de/webservice/oparl/v1.0/system
+  url: https://ris.schwalmtal.de/webservice/oparl/v1.1/system
 
 - title: Stadt Leipzig
   osm: 62649
@@ -422,7 +422,7 @@
 - title: Stadt Krefeld
   osm: 62748
   wd: Q2805
-  url: https://ris.krefeld.de/webservice/oparl/v1.0/system
+  url: https://ris.krefeld.de/webservice/oparl/v1.1/system
 
 - title: Landkreis Markisch-Oderland
   osm: 318248
@@ -447,7 +447,7 @@
 - title: Stadt Goch
   osm: 167969
   wd: Q16006
-  url: https://ris.goch.de/webservice/oparl/v1/system
+  url: https://ris.goch.de/webservice/oparl/v1.1/system
 
 - title: Regionalverband Ruhr
   url: https://rvr-online.gremien.info/oparl
@@ -525,7 +525,7 @@
 - title: Berlin Marzahn-Hellersdorf
   osm: 164712
   wd: Q119284
-  url: https://www.sitzungsdienst-marzahn-hellersdorf.de/oi/oparl/1.0/system.asp
+  url: https://www.sitzungsdienst-marzahn-hellersdorf.de/oi/oparl/1.1/system.asp
 
 - title: Berlin Pankow
   osm: 164723
@@ -585,57 +585,57 @@
 - title: Gemeinde Cölbe
   osm: 225490
   wd: Q560951
-  url: https://rim.ekom21.de/coelbe/webservice/oparl/v1.0/system
+  url: https://rim.ekom21.de/coelbe/webservice/oparl/v1.1/system
 
 - title: Gemeinde Ehringshausen
   osm: 215976
   wd: Q633810
-  url: https://rim.ekom21.de/ehringshausen/webservice/oparl/v1.0/system
+  url: https://rim.ekom21.de/ehringshausen/webservice/oparl/v1.1/system
 
 - title: Stadt Eschwege
   osm: 549419
   wd: Q1468
-  url: https://rim.ekom21.de/eschwege/webservice/oparl/v1.0/system
+  url: https://rim.ekom21.de/eschwege/webservice/oparl/v1.1/system
 
 - title: Gemeinde Fernwald
   osm: 418621
   wd: Q625773
-  url: https://rim.ekom21.de/fernwald/webservice/oparl/v1.0/system
+  url: https://rim.ekom21.de/fernwald/webservice/oparl/v1.1/system
 
 - title: Gemeinde Glashütten
   osm: 418290
   wd: Q637032
-  url: https://rim.ekom21.de/glashuetten/webservice/oparl/v1.0/system
+  url: https://rim.ekom21.de/glashuetten/webservice/oparl/v1.1/system
 
 - title: Stadt Großalmerode
   osm: 549413
   wd: Q538635
-  url: https://rim.ekom21.de/grossalmerode/webservice/oparl/v1.0/system
+  url: https://rim.ekom21.de/grossalmerode/webservice/oparl/v1.1/system
 
 - title: Stadt Hessisch Lichtenau
   osm: 549417
   wd: Q558563
-  url: https://rim.ekom21.de/hessisch-lichtenau/webservice/oparl/v1.0/system
+  url: https://rim.ekom21.de/hessisch-lichtenau/webservice/oparl/v1.1/system
 
 - title: Kreisstadt Homberg (Efze)
   osm: 452196
   wd: Q558616
-  url: https://rim.ekom21.de/homberg-efze/webservice/oparl/v1.0/system
+  url: https://rim.ekom21.de/homberg-efze/webservice/oparl/v1.1/system
 
 - title: Stadtverwaltung Ortenberg
   osm: 450120
   wd: Q622509
-  url: https://rim.ekom21.de/ortenberg/webservice/oparl/v1.0/system
+  url: https://rim.ekom21.de/ortenberg/webservice/oparl/v1.1/system
 
 - title: Gemeinde Waldbrunn im Westerwald
   osm: 324300
   wd: Q568927
-  url: https://rim.ekom21.de/waldbrunn/webservice/oparl/v1.0/system
+  url: https://rim.ekom21.de/waldbrunn/webservice/oparl/v1.1/system
 
 - title: Gemeinde Wachtendonk
   osm: 168001
   wd: Q243139
-  url: https://ris.wachtendonk.de/webservice/oparl/v1.0/system
+  url: https://ris.wachtendonk.de/webservice/oparl/v1.1/system
 
 - title: Stadt Bergheim
   osm: 168469
@@ -645,7 +645,7 @@
 - title: Stadt Olpe
   osm: 163179
   wd: Q10898
-  url: https://sitzungsdienst.kdz-ws.net/gkz330/webservice/oparl/v1.0/system
+  url: https://sitzungsdienst.kdz-ws.net/gkz330/webservice/oparl/v1.1/system
 
 - title: Stadt Braunschweig
   osm: 62531
