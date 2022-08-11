@@ -651,3 +651,9 @@
   osm: 62531
   wd: Q2773
   url: https://ratsinfo.braunschweig.de/bi/oparl/1.0/system.asp
+
+- title: Stadt Pirmasens
+  osm:  62642
+  wd: Q14849
+  url: https://oparl.stadt-pirmasens.de/oparl/system
+
