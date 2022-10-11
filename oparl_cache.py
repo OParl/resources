@@ -38,7 +38,15 @@ except ImportError:
 
 
 class OParlCache:
-    def __init__(self, entrypoint, schemadir, cachedir, validate, external_list_limit=None, max_workes=None):
+    def __init__(
+        self,
+        entrypoint,
+        schemadir,
+        cachedir,
+        validate,
+        external_list_limit=None,
+        max_workes=None,
+    ):
         self.schema = {}
         self.cachedir = cachedir
         self.entrypoint = entrypoint
@@ -53,7 +61,9 @@ class OParlCache:
 
         for schemafile in os.listdir(schemadir):
             with open(os.path.join(schemadir, schemafile)) as file:
-                self.schema[os.path.splitext(schemafile)[0]] = self.json_load_hooked(file)
+                self.schema[os.path.splitext(schemafile)[0]] = self.json_load_hooked(
+                    file
+                )
 
         if os.path.isfile(self.cache_status_file):
             with open(self.cache_status_file) as f:
@@ -69,7 +79,9 @@ class OParlCache:
 
     @staticmethod
     def iso8601_now():
-        return datetime.datetime.now().replace(microsecond=0, tzinfo=tzlocal()).isoformat()
+        return (
+            datetime.datetime.now().replace(microsecond=0, tzinfo=tzlocal()).isoformat()
+        )
 
     def json_loads_hooked(self, data):
         return json.loads(data, object_pairs_hook=self.object_pairs_hook)
@@ -81,7 +93,11 @@ class OParlCache:
         self.external_lists_lock.acquire()
         print("Scheduled: " + element["url"])
         self.external_lists.append(element)
-        self.futures.append(self.thread_pool.submit(self.parse_external_list, element["url"], element["last_update"]))
+        self.futures.append(
+            self.thread_pool.submit(
+                self.parse_external_list, element["url"], element["last_update"]
+            )
+        )
         self.external_lists_lock.release()
 
     def url_to_path(self, url_raw):
@@ -105,7 +121,11 @@ class OParlCache:
         if url.fragment != "":
             url_options += "#" + url.fragment
 
-        return os.path.join(self.cachedir, url.scheme + ":" + url.netloc, url.path[1:] + url_options + ".json")
+        return os.path.join(
+            self.cachedir,
+            url.scheme + ":" + url.netloc,
+            url.path[1:] + url_options + ".json",
+        )
 
     def download_external_list(self, url):
         """
@@ -130,14 +150,16 @@ class OParlCache:
     def write_to_cache(self, url, cacheable):
         filepath = self.url_to_path(url)
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
-        with open(filepath, 'w') as f:
+        with open(filepath, "w") as f:
             json.dump(cacheable, f, indent=4)
 
     def parse_entry(self, key, entry, entry_def):
         if entry_def["type"] == "array":
             i = 0
             while i < len(entry):
-                entry[i] = self.parse_entry(key + "[" + str(i) + "]", entry[i], entry_def["items"])
+                entry[i] = self.parse_entry(
+                    key + "[" + str(i) + "]", entry[i], entry_def["items"]
+                )
                 i += 1
         elif entry_def["type"] == "object":
             if entry["type"] == "Feature":
@@ -180,7 +202,9 @@ class OParlCache:
         if not self.external_list_limit:
             external_list_iterator = self.download_external_list(url)
         else:
-            external_list_iterator = islice(self.download_external_list(url), self.external_list_limit)
+            external_list_iterator = islice(
+                self.download_external_list(url), self.external_list_limit
+            )
 
         for i in external_list_iterator:
             if self.validate:
@@ -218,10 +242,16 @@ class OParlCache:
 
         for i in self.external_lists:
             print("Scheduled: " + i["url"])
-            self.futures.append(self.thread_pool.submit(self.parse_external_list, i["url"], i["last_update"]))
+            self.futures.append(
+                self.thread_pool.submit(
+                    self.parse_external_list, i["url"], i["last_update"]
+                )
+            )
 
         for i in self.futures:
-            collected_messages = i.result()  # keep i.result() to have the future be executed
+            collected_messages = (
+                i.result()
+            )  # keep i.result() to have the future be executed
             for key, value in collected_messages.items():
                 print("{:>5}x: {}".format(value, key))
 
@@ -236,10 +266,9 @@ class OParlCache:
                 i["external_lists"] = self.external_lists
                 break
         else:
-            cache_status.append({
-                "entrypoint": self.entrypoint,
-                "external_lists": self.external_lists
-            })
+            cache_status.append(
+                {"entrypoint": self.entrypoint, "external_lists": self.external_lists}
+            )
 
         with open(self.cache_status_file, "w") as f:
             json.dump(cache_status, f, indent=4)
@@ -272,21 +301,30 @@ def main():
     parser.add_argument("--schemadir", default="~/oparl/schema/")
     parser.add_argument("--cachedir", default="~/cache/")
     parser.add_argument("--max-workers", default=None, type=int)
-    parser.add_argument("--external-list-limit", default=None, type=int,
-                        help="Limits the number of objects retrieved from the external lists. \
-                        This is for the validation and benchmarking purposes")
+    parser.add_argument(
+        "--external-list-limit",
+        default=None,
+        type=int,
+        help="Limits the number of objects retrieved from the external lists. \
+                        This is for the validation and benchmarking purposes",
+    )
 
     # Why do boolean flags no works?
-    parser.add_argument('--validate', dest='validate', action='store_true')
-    parser.add_argument('--no-validate', dest='validate', action='store_false')
+    parser.add_argument("--validate", dest="validate", action="store_true")
+    parser.add_argument("--no-validate", dest="validate", action="store_false")
     parser.set_defaults(feature=True)
 
     args = parser.parse_args()
 
-    oparl_cache = OParlCache(args.entrypoint, os.path.expanduser(args.schemadir), os.path.expanduser(args.cachedir),
-                             args.validate, args.external_list_limit)
+    oparl_cache = OParlCache(
+        args.entrypoint,
+        os.path.expanduser(args.schemadir),
+        os.path.expanduser(args.cachedir),
+        args.validate,
+        args.external_list_limit,
+    )
     oparl_cache.load_to_cache()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
