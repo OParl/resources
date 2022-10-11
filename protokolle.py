@@ -27,7 +27,10 @@ from oparl_cache import OParlCache
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--entrypoint", default="https://www.muenchen-transparent.de/oparl/v1.0/list/body")
+    parser.add_argument(
+        "--entrypoint",
+        default="https://www.muenchen-transparent.de/oparl/v1.0/list/body",
+    )
     parser.add_argument("--schema", default="/home/konsti/oparl/schema")
     parser.add_argument("--cache", default="/home/konsti/cache-python")
     args = parser.parse_args()
@@ -65,8 +68,16 @@ def main():
                 file = cacher.get_from_cache(fileurl)
                 name = file["name"]
                 good_words = ["protokol", "Protokoll", "Niederschrift", "Prot"]
-                bad_words = ["Einladung", "Nachtrag", "nachtrag", "Anwesenheitsliste", "Tagesordnung", "TO ", "to-",
-                             "Ladung"]
+                bad_words = [
+                    "Einladung",
+                    "Nachtrag",
+                    "nachtrag",
+                    "Anwesenheitsliste",
+                    "Tagesordnung",
+                    "TO ",
+                    "to-",
+                    "Ladung",
+                ]
                 if any(x in name for x in good_words):  # good
                     good += 1
                     break
@@ -80,7 +91,14 @@ def main():
                 bad += 1
 
         assert total == good + bad + undecided
-        line = [ba["shortName"][3:], total, good, bad, undecided, int(good * 100 / total)]
+        line = [
+            ba["shortName"][3:],
+            total,
+            good,
+            bad,
+            undecided,
+            int(good * 100 / total),
+        ]
         bezirkausschuesse_stats.append(line)
 
     format_string = "{:3} | {:5} | {:4} | {:3} | {:4} | {:4}"
@@ -90,5 +108,6 @@ def main():
     for line in bezirkausschuesse_stats:
         print(format_string.format(*line))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

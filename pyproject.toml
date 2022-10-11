@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "resources"
+version = "0.1.0"
+description = ""
+authors = ["konstin <konstin@mailbox.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.28.1"
+httpx = "^0.23.0"
+python-dateutil = "^2.8.2"
+aiohttp = "^3.8.3"
+tqdm = "^4.64.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = { extras = ["d"], version = "^22.10.0" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
