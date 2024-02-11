@@ -1,0 +1,1874 @@
+openapi: 3.0.0
+info:
+  title: OParl API
+  version: "1.1"
+  description: Zugriff auf maschinenlesbare Informationen aus parlamentarischen Informationssystemen.
+servers:
+  - description: Stadt Köln
+    url: https://buergerinfo.stadt-koeln.de/oparl
+  - description: Stadt Bonn
+    url: https://www.bonn.sitzung-online.de/public/oparl
+  - description: Eschwege
+    url: https://rim.ekom21.de/eschwege/webservice/oparl/v1.1
+  - description: Landeshauptstadt Dusseldorf
+    url: https://ris-oparl.itk-rheinland.de/Oparl
+  - description: Stadt Dresden
+    url: https://oparl.dresden.de
+  - description: Stadt Leipzig
+    url: https://ratsinformation.leipzig.de/allris_leipzig_public/oparl
+  - description: Stadt Wuppertal
+    url: https://oparl.wuppertal.de/oparl
+  - description: Stadt Münster
+    url: https://oparl.stadt-muenster.de
+  - description: Stadt Krefeld
+    url: https://ris.krefeld.de/webservice/oparl/v1.1
+  - description: Klingenstadt Solingen
+    url: https://sdnetrim.kdvz-frechen.de/rim4957/webservice/oparl/v1.1
+  - description: Stadt Ulm
+    url: https://buergerinfo.ulm.de/oparl
+  - description: Stadt Herford
+    url: https://herford.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Stadt Bergheim
+    url: https://sdnetrim.kdvz-frechen.de/rim4800/webservice/oparl/v1.1
+  - description: Stadt Pulheim
+    url: https://sdnetrim.kdvz-frechen.de/rim4350/webservice/oparl/v1.1
+  - description: Stadt Willich
+    url: https://ris.stadt-willich.de/webservice/oparl/v1.1
+  - description: Stadt Erftstadt
+    url: https://sdnetrim.kdvz-frechen.de/rim4490/webservice/oparl/v1.1
+  - description: Kreis Gütersloh
+    url: https://sdnetrim.kdvz-frechen.de/rim4890/webservice/oparl/v1.1
+  - description: Gemeinde Nettersheim
+    url: https://sdnetrim.kdvz-frechen.de/rim4580/webservice/oparl/v1.1
+  - description: Kreisverwaltung Euskirchen
+    url: https://sdnetrim.kdvz-frechen.de/rim4520/webservice/oparl/v1.1
+  - description: Stadt Rheda-Wiedenbrück
+    url: https://ratsinfo.rheda-wiedenbrueck.de/webservice/oparl/v1.1
+  - description: Stadt Gronau
+    url: https://gronau.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Stadt Brühl
+    url: https://ratsinfo.bruehl.de/webservice/oparl/v1.1
+  - description: Stadt Lahr/Schwarzwald
+    url: https://lahr.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Stadt Pirmasens
+    url: https://oparl.stadt-pirmasens.de/oparl
+  - description: Stadt Wesseling
+    url: https://sdnetrim.kdvz-frechen.de/rim4420/webservice/oparl/v1.1
+  - description: Stadt Wesseling
+    url: https://ratsinfo.wesseling.de/webservice/oparl/v1.1
+  - description: Stadt Goch
+    url: https://ris.goch.de/webservice/oparl/v1.1
+  - description: Stadt Jülich
+    url: https://sdnetrim.kdvz-frechen.de/rim4240/webservice/oparl/v1.1
+  - description: Stadt Enger
+    url: https://enger.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Stadt Spenge
+    url: https://spenge.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Stadt Vlotho
+    url: https://vlotho.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Gemeinde Hiddenhausen
+    url: https://hiddenhausen.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Gemeinde Kirchlengern
+    url: https://kirchlengern.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Gemeinde Rödinghausen
+    url: https://roedinghausen.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Gemeinde Schwalmtal
+    url: https://ris.schwalmtal.de/webservice/oparl/v1.1
+  - description: Gemeinde Ladbergen
+    url: https://ladbergen.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Rahden
+    url: http://rahden.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Gemeinde Ladbergen
+    url: https://ladbergen.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Gemeinde Stemwede
+    url: https://stemwede.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Gemeinde Stemwede
+    url: https://stemwede.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Gemeinde Aldenhoven
+    url: https://ratsinfo.aldenhoven.de/webservice/oparl/v1.1
+  - description: Gemeinde Hürtgenwald
+    url: https://sdnetrim.kdvz-frechen.de/rim4220/webservice/oparl/v1.1
+  - description: Gemeinde Inden
+    url: https://sdnetrim.kdvz-frechen.de/rim4230/webservice/oparl/v1.1
+  - description: Gemeinde Kreuzau
+    url: https://sdnetrim.kdvz-frechen.de/rim4250/webservice/oparl/v1.1
+  - description: Gemeinde Langerwehe
+    url: https://sdnetrim.kdvz-frechen.de/rim4260/webservice/oparl/v1.1
+  - description: Gemeinde Merzenich
+    url: https://sdnetrim.kdvz-frechen.de/rim4280/webservice/oparl/v1.1
+  - description: Gemeinde Nörvenich
+    url: https://sdnetrim.kdvz-frechen.de/rim4160/webservice/oparl/v1.1
+  - description: Gemeinde Titz
+    url: https://sdnetrim.kdvz-frechen.de/rim4170/webservice/oparl/v1.1
+  - description: Gemeinde Vettweiß
+    url: https://sdnetrim.kdvz-frechen.de/rim4180/webservice/oparl/v1.1
+  - description: Stadt Linnich
+    url: https://sdnetrim.kdvz-frechen.de/rim4270/webservice/oparl/v1.1
+  - description: Velen
+    url: https://velen.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Gemeinde Steinhagen
+    url: https://ratsinfo.steinhagen.de/webservice/oparl/v1.1
+  - description: Gemeinde Langenberg
+    url: https://sdnetrim.kdvz-frechen.de/rim4883/webservice/oparl/v1.1
+  - description: Gemeinde Weilerswist
+    url: https://sdnetrim.kdvz-frechen.de/rim4510/webservice/oparl/v1.1
+  - description: Gemeinde Kall
+    url: https://sdnetrim.kdvz-frechen.de/rim4550/webservice/oparl/v1.1
+  - description: Stadt Bad Munstereifel
+    url: https://sdnetrim.kdvz-frechen.de/rim4500/webservice/oparl/v1.1
+  - description: Stadt Bad Münstereifel
+    url: https://ratsinfo.bad-muenstereifel.de/webservice/oparl/v1.1
+  - description: Leopoldshohe
+    url: https://leopoldshoehe.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Gemeinde Wachtendonk
+    url: https://ris.wachtendonk.de/webservice/oparl/v1.1
+  - description: Stadt Rees
+    url: https://sessionnet-oparl.krz.de/oparl/bodies/5205
+  - description: Stadt Bedburg
+    url: https://sdnetrim.kdvz-frechen.de/rim4780/webservice/oparl/v1.1
+  - description: Aarbergen
+    url: https://rim.ekom21.de/aarbergen/webservice/oparl/v1.1
+  - description: Gemeinde Schiffdorf
+    url: https://schiffdorf.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Willingen
+    url: https://rim.ekom21.de/willingen/webservice/oparl/v1.1
+  - description: Großalmerode
+    url: https://rim.ekom21.de/grossalmerode/webservice/oparl/v1.1
+  - description: Stadt Großalmerode
+    url: https://rim.ekom21.de/grossalmerode/webservice/oparl/v1.1
+  - description: Stadt Bad Pyrmont
+    url: https://badpyrmont.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Hessisch Lichtenau
+    url: https://rim.ekom21.de/hessisch-lichtenau/webservice/oparl/v1.1
+  - description: Stadt Hessisch Lichtenau
+    url: https://rim.ekom21.de/hessisch-lichtenau/webservice/oparl/v1.1
+  - description: Kreisstadt Homberg (Efze)
+    url: https://rim.ekom21.de/homberg-efze/webservice/oparl/v1.1
+  - description: Uplengen
+    url: https://uplengen.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Cölbe
+    url: https://rim.ekom21.de/coelbe/webservice/oparl/v1.1
+  - description: Gemeinde Cölbe
+    url: https://rim.ekom21.de/coelbe/webservice/oparl/v1.1
+  - description: Gemeinde Lohfelden
+    url: https://lohfelden.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Gemeinde Waldbrunn im Westerwald
+    url: https://rim.ekom21.de/waldbrunn/webservice/oparl/v1.1
+  - description: Waldbrunn (Westerwald)
+    url: https://rim.ekom21.de/waldbrunn/webservice/oparl/v1.1
+  - description: Kronberg im Taunus
+    url: https://kronberg.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Schmitten
+    url: https://rim.ekom21.de/schmitten/webservice/oparl/v1.1
+  - description: Ortenberg
+    url: https://rim.ekom21.de/ortenberg/webservice/oparl/v1.1
+  - description: Stadtverwaltung Ortenberg
+    url: https://rim.ekom21.de/ortenberg/webservice/oparl/v1.1
+  - description: Homberg (Ohm)
+    url: https://rim.ekom21.de/homberg-ohm/webservice/oparl/v1.1
+  - description: Schwarzenborn
+    url: https://rim.ekom21.de/schwarzenborn/webservice/oparl/v1.1
+  - description: Fernwald
+    url: https://rim.ekom21.de/fernwald/webservice/oparl/v1.1
+  - description: Gemeinde Fernwald
+    url: https://rim.ekom21.de/fernwald/webservice/oparl/v1.1
+  - description: Gemeinde Wallenhorst
+    url: https://wallenhorst.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Guxhagen
+    url: https://rim.ekom21.de/guxhagen/webservice/oparl/v1.1
+  - description: Ehringshausen
+    url: https://rim.ekom21.de/ehringshausen/webservice/oparl/v1.1
+  - description: Gemeinde Ehringshausen
+    url: https://rim.ekom21.de/ehringshausen/webservice/oparl/v1.1
+  - description: Samtgemeinde Sögel
+    url: http://soegel.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: Gemeinde Glashütten
+    url: https://rim.ekom21.de/glashuetten/webservice/oparl/v1.1
+  - description: Glashütten
+    url: https://rim.ekom21.de/glashuetten/webservice/oparl/v1.1
+  - description: Stadt Emsdetten
+    url: https://emsdetten.ratsinfomanagement.net/webservice/oparl/v1.1
+  - description: OParl Mirror
+    url: https://mirror.oparl.org
+
+paths:
+  /system:
+    get:
+      summary: Informationen über das OParl-System
+      operationId: getSystem
+      tags:
+        - System
+      responses:
+        "200":
+          description: Erfolgreiche Antwort mit Informationen über das OParl-System.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/System"
+              example:
+                id: "https://ris-oparl.itk-rheinland.de/Oparl/system"
+                type: "https://schema.oparl.org/1.1/System"
+                oparlVersion: "https://schema.oparl.org/1.1/"
+                body: "https://ris-oparl.itk-rheinland.de/Oparl/bodies"
+  /bodies:
+    get:
+      summary: Liste aller Körperschaften mit Paginierung
+      operationId: listBodies
+      tags:
+        - Body
+      parameters:
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/CreatedSince"
+        - $ref: "#/components/parameters/CreatedUntil"
+        - $ref: "#/components/parameters/ModifiedSince"
+        - $ref: "#/components/parameters/ModifiedUntil"
+        - $ref: "#/components/parameters/OmitInternal"
+        - $ref: "#/components/parameters/Limit"
+      responses:
+        "200":
+          description: Eine Liste von Körperschaften.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Body"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  links:
+                    $ref: "#/components/schemas/Links"
+              example:
+                data:
+                  - id: "https://ris-oparl.itk-rheinland.de/Oparl/bodies/1"
+                    type: "https://schema.oparl.org/1.1/Body"
+                    name: "Stadt Köln"
+                    organization: "https://ris-oparl.itk-rheinland.de/Oparl/bodies/1/organizations"
+                    person: "https://ris-oparl.itk-rheinland.de/Oparl/bodies/1/persons"
+                    meeting: "https://ris-oparl.itk-rheinland.de/Oparl/bodies/1/meetings"
+                    paper: "https://ris-oparl.itk-rheinland.de/Oparl/bodies/1/papers"
+                    legislativeTerm:
+                      - id: "https://ris-oparl.itk-rheinland.de/Oparl/bodies/1/legislativeTerms/1"
+                        type: "https://schema.oparl.org/1.1/LegislativeTerm"
+                        name: "2014-2020"
+                        startDate: "2014-06-01"
+                        endDate: "2020-05-31"
+  /bodies/{bodyId}/organizations:
+    get:
+      summary: Liste aller Gruppierungen einer Körperschaft
+      operationId: listOrganizationsByBody
+      tags:
+        - Organization
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/CreatedSince"
+        - $ref: "#/components/parameters/CreatedUntil"
+        - $ref: "#/components/parameters/ModifiedSince"
+        - $ref: "#/components/parameters/ModifiedUntil"
+        - $ref: "#/components/parameters/OmitInternal"
+        - $ref: "#/components/parameters/Limit"
+      responses:
+        "200":
+          description: Eine Liste von Gruppierungen.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Organization"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  links:
+                    $ref: "#/components/schemas/Links"
+  /bodies/{bodyId}/organizations/{organizationId}:
+    get:
+      summary: Details einer spezifischen Organisation innerhalb eines bestimmten Body
+      operationId: getOrganizationByBody
+      tags:
+        - Organization
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - name: organizationId
+          in: path
+          required: true
+          description: ID der Gruppierung
+          schema:
+            type: string
+            format: url
+      responses:
+        "200":
+          description: Erfolgreiche Antwort mit Informationen über die Gruppierung.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/Organization"
+  /bodies/{bodyId}/persons:
+    get:
+      summary: Liste aller Personen einer Körperschaft
+      operationId: listPersonsByBody
+      tags:
+        - Person
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/CreatedSince"
+        - $ref: "#/components/parameters/CreatedUntil"
+        - $ref: "#/components/parameters/ModifiedSince"
+        - $ref: "#/components/parameters/ModifiedUntil"
+        - $ref: "#/components/parameters/OmitInternal"
+        - $ref: "#/components/parameters/Limit"
+      responses:
+        "200":
+          description: Eine Liste von Personen.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Person"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  links:
+                    $ref: "#/components/schemas/Links"
+  /bodies/{bodyId}/persons/{personId}:
+    get:
+      summary: Details einer spezifischen Person innerhalb eines bestimmten Body
+      operationId: getPersonByBody
+      tags:
+        - Person
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - name: personId
+          in: path
+          required: true
+          description: ID der Person
+          schema:
+            type: string
+            format: url
+      responses:
+        "200":
+          description: Erfolgreiche Antwort mit Informationen über die Person.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/Person"
+  /bodies/{bodyId}/meetings:
+    get:
+      summary: Liste aller Sitzungen einer Körperschaft
+      operationId: listMeetingsByBody
+      tags:
+        - Meeting
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/CreatedSince"
+        - $ref: "#/components/parameters/CreatedUntil"
+        - $ref: "#/components/parameters/ModifiedSince"
+        - $ref: "#/components/parameters/ModifiedUntil"
+        - $ref: "#/components/parameters/OmitInternal"
+        - $ref: "#/components/parameters/Limit"
+      responses:
+        "200":
+          description: Eine Liste von Sitzungen.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Meeting"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  links:
+                    $ref: "#/components/schemas/Links"
+  /bodies/{bodyId}/meetings/{meetingId}:
+    get:
+      summary: Details einer spezifischen Sitzung innerhalb eines bestimmten Body
+      operationId: getMeetingByBody
+      tags:
+        - Meeting
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - name: meetingId
+          in: path
+          required: true
+          description: ID der Sitzung
+          schema:
+            type: string
+            format: url
+      responses:
+        "200":
+          description: Erfolgreiche Antwort mit Informationen über die Sitzung.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/Meeting"
+  /bodies/{bodyId}/papers:
+    get:
+      summary: Liste aller Drucksachen einer Körperschaft
+      operationId: listPapersByBody
+      tags:
+        - Paper
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/CreatedSince"
+        - $ref: "#/components/parameters/CreatedUntil"
+        - $ref: "#/components/parameters/ModifiedSince"
+        - $ref: "#/components/parameters/ModifiedUntil"
+        - $ref: "#/components/parameters/OmitInternal"
+        - $ref: "#/components/parameters/Limit"
+      responses:
+        "200":
+          description: Eine Liste von Drucksachen.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Paper"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  links:
+                    $ref: "#/components/schemas/Links"
+  /bodies/{bodyId}/papers/{paperId}:
+    get:
+      summary: Details einer spezifischen Drucksache innerhalb eines bestimmten Body
+      operationId: getPaperByBody
+      tags:
+        - Paper
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - name: paperId
+          in: path
+          required: true
+          description: ID der Drucksache
+          schema:
+            type: string
+            format: url
+      responses:
+        "200":
+          description: Erfolgreiche Antwort mit Informationen über die Drucksache.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/Paper"
+  /bodies/{bodyId}/memberships:
+    get:
+      summary: Liste aller Mitgliedschaften einer Körperschaft
+      operationId: listMembershipsByBody
+      tags:
+        - Membership
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/CreatedSince"
+        - $ref: "#/components/parameters/CreatedUntil"
+        - $ref: "#/components/parameters/ModifiedSince"
+        - $ref: "#/components/parameters/ModifiedUntil"
+        - $ref: "#/components/parameters/OmitInternal"
+        - $ref: "#/components/parameters/Limit"
+      responses:
+        "200":
+          description: Eine Liste von Mitgliedschaften.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Membership"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  links:
+                    $ref: "#/components/schemas/Links"
+  /bodies/{bodyId}/memberships/{membershipId}:
+    get:
+      summary: Details einer spezifischen Mitgliedschaft innerhalb eines bestimmten Body
+      operationId: getMembershipByBody
+      tags:
+        - Membership
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - name: membershipId
+          in: path
+          required: true
+          description: ID der Mitgliedschaft
+          schema:
+            type: string
+            format: url
+      responses:
+        "200":
+          description: Erfolgreiche Antwort mit Informationen über die Mitgliedschaft.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/Membership"
+  /bodies/{bodyId}/locations:
+    get:
+      summary: Liste aller Orte einer Körperschaft
+      operationId: listLocationsByBody
+      tags:
+        - Location
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/CreatedSince"
+        - $ref: "#/components/parameters/CreatedUntil"
+        - $ref: "#/components/parameters/ModifiedSince"
+        - $ref: "#/components/parameters/ModifiedUntil"
+        - $ref: "#/components/parameters/OmitInternal"
+        - $ref: "#/components/parameters/Limit"
+      responses:
+        "200":
+          description: Eine Liste von Orten.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Location"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  links:
+                    $ref: "#/components/schemas/Links"
+  /bodies/{bodyId}/locations/{locationId}:
+    get:
+      summary: Details eines spezifischen Ortes innerhalb eines bestimmten Body
+      operationId: getLocationByBody
+      tags:
+        - Location
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - name: locationId
+          in: path
+          required: true
+          description: ID des Ortes
+          schema:
+            type: string
+            format: url
+      responses:
+        "200":
+          description: Erfolgreiche Antwort mit Informationen über den Ort.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/Location"
+  /bodies/{bodyId}/agendaItems:
+    get:
+      summary: Liste aller Tagesordnungspunkte einer Körperschaft
+      operationId: listAgendaItemsByBody
+      tags:
+        - AgendaItem
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/CreatedSince"
+        - $ref: "#/components/parameters/CreatedUntil"
+        - $ref: "#/components/parameters/ModifiedSince"
+        - $ref: "#/components/parameters/ModifiedUntil"
+        - $ref: "#/components/parameters/OmitInternal"
+        - $ref: "#/components/parameters/Limit"
+      responses:
+        "200":
+          description: Eine Liste von Tagesordnungspunkten.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/AgendaItem"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  links:
+                    $ref: "#/components/schemas/Links"
+  /bodies/{bodyId}/agendaItems/{agendaItemId}:
+    get:
+      summary: Details eines spezifischen Tagesordnungspunktes innerhalb eines bestimmten Body
+      operationId: getAgendaItemByBody
+      tags:
+        - AgendaItem
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - name: agendaItemId
+          in: path
+          required: true
+          description: ID des Tagesordnungspunktes
+          schema:
+            type: string
+            format: url
+      responses:
+        "200":
+          description: Erfolgreiche Antwort mit Informationen über den Tagesordnungspunkt.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/AgendaItem"
+  /bodies/{bodyId}/legislativeTerms:
+    get:
+      summary: Liste aller Wahlperioden einer Körperschaft
+      operationId: listLegislativeTermsByBody
+      tags:
+        - LegislativeTerm
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/CreatedSince"
+        - $ref: "#/components/parameters/CreatedUntil"
+        - $ref: "#/components/parameters/ModifiedSince"
+        - $ref: "#/components/parameters/ModifiedUntil"
+        - $ref: "#/components/parameters/OmitInternal"
+        - $ref: "#/components/parameters/Limit"
+      responses:
+        "200":
+          description: Eine Liste von Wahlperioden.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/LegislativeTerm"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  links:
+                    $ref: "#/components/schemas/Links"
+  /bodies/{bodyId}/legislativeTerms/{legislativeTermId}:
+    get:
+      summary: Details einer spezifischen Wahlperiode innerhalb eines bestimmten Body
+      operationId: getLegislativeTermByBody
+      tags:
+        - LegislativeTerm
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - name: legislativeTermId
+          in: path
+          required: true
+          description: ID der Wahlperiode
+          schema:
+            type: string
+            format: url
+      responses:
+        "200":
+          description: Erfolgreiche Antwort mit Informationen über die Wahlperiode.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/LegislativeTerm"
+  /bodies/{bodyId}/consultations:
+    get:
+      summary: Liste aller Beratungen einer Körperschaft
+      operationId: listConsultationsByBody
+      tags:
+        - Consultation
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/CreatedSince"
+        - $ref: "#/components/parameters/CreatedUntil"
+        - $ref: "#/components/parameters/ModifiedSince"
+        - $ref: "#/components/parameters/ModifiedUntil"
+        - $ref: "#/components/parameters/OmitInternal"
+        - $ref: "#/components/parameters/Limit"
+      responses:
+        "200":
+          description: Eine Liste von Beratungen.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Consultation"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  links:
+                    $ref: "#/components/schemas/Links"
+  /bodies/{bodyId}/consultations/{consultationId}:
+    get:
+      summary: Details einer spezifischen Beratung innerhalb eines bestimmten Body
+      operationId: getConsultationByBody
+      tags:
+        - Consultation
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - name: consultationId
+          in: path
+          required: true
+          description: ID der Beratung
+          schema:
+            type: string
+            format: url
+      responses:
+        "200":
+          description: Erfolgreiche Antwort mit Informationen über die Beratung.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/Consultation"
+  /bodies/{bodyId}/files:
+    get:
+      summary: Liste aller Dateien einer Körperschaft
+      operationId: listFilesByBody
+      tags:
+        - File
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/CreatedSince"
+        - $ref: "#/components/parameters/CreatedUntil"
+        - $ref: "#/components/parameters/ModifiedSince"
+        - $ref: "#/components/parameters/ModifiedUntil"
+        - $ref: "#/components/parameters/OmitInternal"
+        - $ref: "#/components/parameters/Limit"
+      responses:
+        "200":
+          description: Eine Liste von Dateien.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/File"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  links:
+                    $ref: "#/components/schemas/Links"
+  /bodies/{bodyId}/files/{fileId}:
+    get:
+      summary: Details einer spezifischen Datei innerhalb eines bestimmten Body
+      operationId: getFileByBody
+      tags:
+        - File
+      parameters:
+        - $ref: "#/components/parameters/BodyId"
+        - name: fileId
+          in: path
+          required: true
+          description: ID der Datei
+          schema:
+            type: string
+            format: url
+      responses:
+        "200":
+          description: Erfolgreiche Antwort mit Informationen über die Datei.
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/File"
+components:
+  schemas:
+    System:
+      title: System
+      description: Ein `oparl:System`-Objekt repräsentiert eine OParl-Schnittstelle für eine bestimmte OParl-Version. Es ist außerdem der Startpunkt für Clients beim Zugriff auf einen Server.\n\nMöchte ein Server mehrere zueinander inkompatible OParl-Versionen unterstützen, dann **muss** der Server für jede Version eine eigenen OParl-Schnittstelle mit einem eigenen `System`-Objekt ausgeben.
+      type: object
+      required:
+        - id
+        - type
+        - oparlVersion
+        - body
+      properties:
+        id:
+          type: string
+          format: url
+        type:
+          type: string
+          pattern: '^https\:\/\/schema\.oparl\.org\/1\.1\/System$'
+        oparlVersion:
+          type: string
+          pattern: '^https\:\/\/schema\.oparl\.org/1\.(0|1)\/$'
+          description: "Die URL der OParl-Spezifikation, die von diesem Server unterstützt wird. Aktuell kommt hier nur ein Wert in Frage. Mit zukünftigen OParl-Versionen kommen weitere mögliche URLs hinzu. Wert: `https://schema.oparl.org/1.1/`"
+        # otherOparlVersions:
+        #   description: Dient der Angabe von System-Objekten mit anderen OParl-Versionen.
+        #   allOf:
+        #     - $ref: "#/components/schemas/System"
+        #   items:
+        #     type: string
+        #     format: url
+        #   type: array
+        license:
+          description: Lizenz, unter der durch diese API abrufbaren Daten stehen, sofern nicht am einzelnen Objekt anders angegeben. Siehe [`license`](#eigenschaft_license).
+          type: string
+          format: url
+        body:
+          description: Link zur [Objektliste](#objektlisten) mit allen Körperschaften, die auf dem System existieren.
+          type: string
+          format: url
+          # Removed the "references" property
+          items:
+            type: object
+            example: Body.json
+        name:
+          description: Nutzerfreundlicher Name für das System, mit dessen Hilfe Nutzerinnen und Nutzer das System erkennen und von anderen unterscheiden können.
+          type: string
+        contactEmail:
+          description: E-Mail-Adresse für Anfragen zur OParl-API. Die Angabe einer E-Mail-Adresse dient sowohl NutzerInnen wie auch Entwicklerinnen von Clients zur Kontaktaufnahme mit dem Betreiber.
+          type: string
+        contactName:
+          description: Name der Ansprechpartnerin bzw. des Ansprechpartners oder der Abteilung, die über die in `contactEmail` angegebene Adresse erreicht werden kann.
+          type: string
+        website:
+          description: URL der Website des parlamentarischen Informationssystems
+          type: string
+          format: url
+        vendor:
+          description: URL der Website des Softwareanbieters, von dem die OParl-Server-Software stammt.
+          type: string
+          format: url
+        product:
+          description: URL zu Informationen über die auf dem System genutzte OParl-Server-Software
+          type: string
+          format: url
+        created:
+          type: string
+          format: date-time
+        modified:
+          type: string
+          format: date-time
+        web:
+          type: string
+          format: url
+        deleted:
+          type: boolean
+    Body:
+      title: Body
+      description: Der Objekttyp oparl:Body dient dazu, eine Körperschaft zu repräsentieren. Eine Körperschaft ist in den meisten Fällen eine Gemeinde, eine Stadt oder ein Landkreis.\nIn der Regel sind auf einem OParl-Server Daten von genau einer Körperschaft gespeichert und es wird daher auch nur ein Body-Objekt ausgegeben. Sind auf dem Server jedoch Daten von mehreren Körperschaften gespeichert, **muss** für jede Körperschaft ein eigenes Body-Objekt ausgegeben werden.
+      type: object
+      required:
+        - id
+        - type
+        - name
+        - organization
+        - person
+        - meeting
+        - paper
+        - legislativeTerm
+      properties:
+        id:
+          type: string
+          format: url
+        type:
+          type: string
+          pattern: '^https\:\/\/schema\.oparl\.org\/1\.1\/Body$'
+        system:
+          description: System, zu dem dieses Objekt gehört.
+          type: string
+          format: url
+        shortName:
+          description: Kurzer Name der Körperschaft.
+          type: string
+        name:
+          description: Der offizielle lange Name der Körperschaft.
+          type: string
+        website:
+          description: Allgemeine Website der Körperschaft.
+          type: string
+          format: url
+        license:
+          description: Lizenz, unter der die Daten dieser Körperschaft stehen, sofern nicht am einzelnen Objekt anders angegeben. Siehe [`license`](#eigenschaft_license).
+          type: string
+          format: url
+        licenseValidSince:
+          description: Zeitpunkt, seit dem die unter `license` angegebene Lizenz gilt. _Vorsicht bei Änderungen der Lizenz die zu restriktiveren Bedingungen führen!_
+          type: string
+          format: date-time
+        oparlSince:
+          description: Zeitpunkt, ab dem OParl für dieses Body bereitgestellt wurde. Dies hilft, um die Datenqualität einzuschätzen, denn erst ab der Einrichtung für OParl kann sichergestellt werden, dass sämtliche Werte korrekt in der Original-Quelle vorliegen.
+          type: string
+          format: date-time
+        ags:
+          description: Der achtstellige Amtliche Gemeindeschlüssel^[Amtliche Gemeindeschlüssel können im [Gemeindeverzeichnis (GV-ISys) des Statistischen Bundesamtes](https://www.destatis.de/DE/ZahlenFakten/LaenderRegionen/Regionales/Gemeindeverzeichnis/Gemeindeverzeichnis.html) eingesehen werden].
+          type: string
+        rgs:
+          description: Der zwölfstellige Regionalschlüssel.
+          type: string
+        equivalent:
+          description: Dient der Angabe zusätzlicher URLs, die dieselbe Körperschaft repräsentieren. Hier können beispielsweise der entsprechende Eintrag der gemeinsamen Normdatei der Deutschen Nationalbibliothek^[Gemeinsame Normdatei <http://www.dnb.de/gnd>], der DBPedia^[DBPedia <http://www.dbpedia.org/>] oder der Wikipedia^[Wikipedia <http://de.wikipedia.org/>] angegeben werden. Body- oder System-Objekte mit anderen OParl-Versionen **dürfen nicht** Teil der Liste sein.
+          type: array
+          items:
+            type: string
+            format: url
+        contactEmail:
+          description: Dient der Angabe einer Kontakt-E-Mail-Adresse. Die Adresse soll die Kontaktaufnahme zu einer für die Körperschaft und idealerweise das parlamentarische Informationssystem zuständigen Stelle ermöglichen.
+          type: string
+        contactName:
+          description: Name oder Bezeichnung der mit `contactEmail` erreichbaren Stelle.
+          type: string
+        organization:
+          description: Link zur [Objektliste](#objektlisten) mit allen Gruppierungen der Körperschaft.
+          type: string
+          format: url
+        person:
+          description: Link zur [Objektliste](#objektlisten) mit allen Personen der Körperschaft.
+          type: string
+          format: url
+        meeting:
+          description: Link zur [Objektliste](#objektlisten) mit allen Sitzungen der Körperschaft.
+          type: string
+          format: url
+        paper:
+          description: Link zur [Objektliste](#objektlisten) mit allen Drucksachen der Körperschaft.
+          type: string
+          format: url
+        legislativeTerm:
+          description: "[Objektliste](#objektlisten) mit den Wahlperioden der Körperschaft."
+          type: array
+          items:
+            $ref: "#/components/schemas/LegislativeTerm"
+        agendaItem:
+          description: "**ZWINGEND** Link zur [Objektliste](#objektlisten) mit allen Tagesordnungspunkten der Körperschaft. Neu in OParl 1.1."
+          type: string
+          format: url
+        consultation:
+          description: "**ZWINGEND** Link zur [Objektliste](#objektlisten) mit allen Beratungen der Körperschaft. Neu in OParl 1.1."
+          type: string
+          format: url
+        file:
+          description: "**ZWINGEND** Link zur [Objektliste](#objektlisten) mit allen Dateien der Körperschaft. Neu in OParl 1.1."
+          type: string
+          format: url
+        locationList:
+          description: "**ZWINGEND** Link zur [Objektliste](#objektlisten) mit allen Ortsangaben der Körperschaft. Neu in OParl 1.1."
+          type: string
+          format: url
+        legislativeTermList:
+          description: "**ZWINGEND** Link zur [Objektliste](#objektlisten) mit allen Legislaturperioden der Körperschaft. Neu in OParl 1.1. Die externe Objektliste enthält die gleichen Objekte wie `legislativeTerm`"
+          type: string
+          format: url
+        membership:
+          description: "**ZWINGEND** Link zur [Objektliste](#objektlisten) mit allen Mitgliedschaften der Körperschaft. Neu in OParl 1.1."
+          type: string
+          format: url
+        classification:
+          description: Art der Körperschaft.
+          type: string
+        location:
+          description: Ort, an dem die Körperschaft beheimatet ist.
+          type: object
+          $ref: "#/components/schemas/Location"
+        keyword:
+          type: array
+          items:
+            type: string
+        created:
+          type: string
+          format: date-time
+        modified:
+          type: string
+          format: date-time
+        web:
+          type: string
+          format: url
+        deleted:
+          type: boolean
+    LegislativeTerm:
+      title: "LegislativeTerm"
+      description: "Dieser Objekttyp dient der Beschreibung einer Wahlperiode."
+      type: "object"
+      required:
+        - "id"
+        - "type"
+      properties:
+        id:
+          type: "string"
+          format: "url"
+        type:
+          type: "string"
+          pattern: "^https://schema.oparl.org/1.1/LegislativeTerm$"
+        body:
+          description: "Rückreferenz auf die Körperschaft, welche nur dann ausgegeben werden muss, wenn das LegislativeTerm-Objekt einzeln abgerufen wird, d.h. nicht Teil einer internen Ausgabe ist."
+          type: "string"
+          format: "url"
+        name:
+          description: "Nutzerfreundliche Bezeichnung der Wahlperiode."
+          type: "string"
+        startDate:
+          description: "Der erste Tag der Wahlperiode."
+          type: "string"
+          format: "date"
+        endDate:
+          description: "Der letzte Tag der Wahlperiode."
+          type: "string"
+          format: "date"
+        license:
+          type: "string"
+        keyword:
+          type: "array"
+          items:
+            type: "string"
+        created:
+          type: "string"
+          format: "date-time"
+        modified:
+          type: "string"
+          format: "date-time"
+        web:
+          type: "string"
+          format: "url"
+        deleted:
+          type: "boolean"
+    AgendaItem:
+      title: "AgendaItem"
+      description: "Tagesordnungspunkte sind die Bestandteile von Sitzungen (`oparl:Meeting`).\nJeder Tagesordnungspunkt widmet sich inhaltlich einem bestimmten Thema, wozu\nin der Regel auch die Beratung bestimmter Drucksachen gehört.\n\nDie Beziehung zwischen einem Tagesordnungspunkt und einer Drucksache wird\nüber ein Objekt vom Typ `oparl:Consultation` hergestellt, das über die\nEigenschaft `consultation` referenziert werden kann."
+      type: "object"
+      required:
+        - "id"
+        - "type"
+        - "order"
+      properties:
+        id:
+          type: "string"
+          format: "url"
+        type:
+          type: "string"
+          pattern: "^https://schema.oparl.org/1.1/AgendaItem$"
+        meeting:
+          description: "Rückreferenz auf das Meeting, welches nur dann ausgegeben werden muss,\nwenn das agendaItem-Objekt einzeln abgerufen wird, d.h. nicht Teil einer\ninternen Ausgabe ist."
+          type: "string"
+          format: "url"
+        number:
+          description: "Gliederungs-\"Nummer\" des Tagesordnungspunktes. Eine beliebige Zeichenkette,\nwie z. B. \"10.\", \"10.1\", \"C\", \"c)\" o. ä. Die Reihenfolge wird nicht dadurch,\nsondern durch die Reihenfolge der TOPs im `agendaItem`-Attribut von `oparl:Meeting`\nfestgelegt, **sollte** allerdings zu dieser identisch sein."
+          type: "string"
+        order:
+          description: "Neu in OParl 1.1: Die Position des Tagesordnungspunkts in der Sitzung,\nwenn alle Tagesordnungspunkte von 0 an durchgehend numeriert werden.\nDiese Nummer entspricht der Position in `Meeting:agendaItem`"
+          type: "integer"
+        name:
+          description: "Das Thema des Tagesordnungspunktes."
+          type: "string"
+        public:
+          description: "Kennzeichnet, ob der Tagesordnungspunkt zur Behandlung in öffentlicher Sitzung\nvorgesehen ist/war. Es wird ein Wahrheitswert (`true` oder `false`) erwartet."
+          type: "boolean"
+        consultation:
+          description: "Beratung, die diesem Tagesordnungspunkt zugewiesen ist."
+          type: "string"
+          format: "url"
+        result:
+          description: "Kategorische Information darüber, welches Ergebnis die Beratung des\nTagesordnungspunktes erbracht hat, in der Bedeutung etwa \"Unverändert\nbeschlossen\" oder \"Geändert beschlossen\"."
+          type: "string"
+        resolutionText:
+          description: "Falls in diesem Tagesordnungspunkt ein Beschluss gefasst wurde, kann hier ein\nText angegeben werden. Das ist besonders dann in der Praxis relevant, wenn der\ngefasste Beschluss (z. B. durch Änderungsantrag) von der Beschlussvorlage abweicht."
+          type: "string"
+        resolutionFile:
+          description: "Falls in diesem Tagesordnungspunkt ein Beschluss gefasst wurde, kann hier eine\nDatei angegeben werden. Das ist besonders dann in der Praxis relevant, wenn der\ngefasste Beschluss (z. B. durch Änderungsantrag) von der Beschlussvorlage abweicht."
+          type: "object"
+        auxiliaryFile:
+          description: "Weitere Dateianhänge zum Tagesordnungspunkt."
+          type: "array"
+          items:
+            type: "object"
+        start:
+          description: "Datum und Uhrzeit des Anfangszeitpunkts des Tagesordnungspunktes. Bei zukünftigen\nTagesordnungspunkten ist dies der geplante Zeitpunkt, bei einem stattgefundenen **kann**\nes der tatsächliche Startzeitpunkt sein."
+          type: "string"
+          format: "date-time"
+        end:
+          description: "Endzeitpunkt des Tagesordnungspunktes als Datum/Uhrzeit. Bei zukünftigen\nTagesordnungspunkten ist dies der geplante Zeitpunkt, bei einer\nstattgefundenen **kann** es der tatsächliche Endzeitpunkt sein."
+          type: "string"
+          format: "date-time"
+        license:
+          type: "string"
+        keyword:
+          type: "array"
+          items:
+            type: "string"
+        created:
+          type: "string"
+          format: "date-time"
+        modified:
+          type: "string"
+          format: "date-time"
+        web:
+          type: "string"
+          format: "url"
+        deleted:
+          type: "boolean"
+    Location:
+      title: "Location"
+      description: "Dieser Objekttyp dient dazu, einen Ortsbezug formal abzubilden. Ortsangaben können sowohl aus Textinformationen bestehen (beispielsweise dem Namen einer Straße/eines Platzes oder eine genaue Adresse) als auch aus Geodaten. Ortsangaben sind auch nicht auf einzelne Positionen beschränkt, sondern können eine Vielzahl von Positionen, Flächen, Strecken etc. abdecken."
+      type: "object"
+      required:
+        - "id"
+        - "type"
+      properties:
+        id:
+          type: "string"
+          format: "url"
+        type:
+          type: "string"
+          pattern: "^https://schema.oparl.org/1.1/Location$"
+        description:
+          description: "Textuelle Beschreibung eines Orts, z. B. in Form einer Adresse."
+          type: "string"
+        geojson:
+          description: "Geodaten-Repräsentation des Orts. Der Wert dieser Eigenschaft **muss** der Spezifikation\nvon GeoJSON entsprechen, d.h. es **muss** ein vollständiges `Feature`-Objekt ausgegeben werden."
+          type: "object"
+        streetAddress:
+          description: "Straße und Hausnummer der Anschrift."
+          type: "string"
+        room:
+          description: "Raumangabe der Anschrift"
+          type: "string"
+        postalCode:
+          description: "Postleitzahl der Anschrift."
+          type: "string"
+        subLocality:
+          description: "Untergeordnete Ortsangabe der Anschrift, z.B. Stadtbezirk, Ortsteil oder Dorf."
+          type: "string"
+        locality:
+          description: "Ortsangabe der Anschrift."
+          type: "string"
+        bodies:
+          description: "Rückreferenzen auf Body-Objekte. Wird nur dann ausgegeben, wenn das Location-Objekt\nnicht als eingebettetes Objekt aufgerufen wird."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        organizations:
+          description: "Rückreferenzen auf Organization-Objekte. Wird nur dann ausgegeben,\nwenn das Location-Objekt nicht als eingebettetes Objekt aufgerufen wird."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        persons:
+          description: "Rückreferenzen auf Person-Objekte. Wird nur dann ausgegeben, wenn das Location-Objekt\nnicht als eingebettetes Objekt aufgerufen wird."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        meetings:
+          description: "Rückreferenzen auf Meeting-Objekte. Wird nur dann ausgegeben, wenn das Location-Objekt\nnicht als eingebettetes Objekt aufgerufen wird."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        papers:
+          description: "Rückreferenzen auf Paper-Objekte. Wird nur dann ausgegeben, wenn das Location-Objekt\nnicht als eingebettetes Objekt aufgerufen wird."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        license:
+          type: "string"
+        keyword:
+          type: "array"
+          items:
+            type: "string"
+        created:
+          type: "string"
+          format: "date-time"
+        modified:
+          type: "string"
+          format: "date-time"
+        web:
+          type: "string"
+          format: "url"
+        deleted:
+          type: "boolean"
+    File:
+      title: "File"
+      description: "Ein Objekt vom Typ `oparl:File` repräsentiert eine Datei, beispielsweise eine PDF-Datei, ein RTF- oder ODF-Dokument,\nund hält Metadaten zu der Datei sowie URLs zum Zugriff auf  die Datei bereit.\n\nObjekte vom Typ `oparl:File` können unter anderem mit Drucksachen (`oparl:Paper`) oder Sitzungen (`oparl:Meeting`) in Beziehung stehen.\nDies wird durch  die Eigenschaft `paper` bzw. `meeting` angezeigt. Mehrere Objekte vom Typ `oparl:File` können mit einander in direkter\nBeziehung stehen, z.B. wenn sie den selben Inhalt in unterschiedlichen technischen Formaten wiedergeben. Hierfür werden die\nEigenschaften `masterFile` bzw. `derivativeFile` eingesetzt. Das gezeigte Beispiel-Objekt repräsentiert eine PDF-Datei\n(zu erkennen an der Eigenschaft `mimeType`) und zeigt außerdem über die Eigenschaft  `masterFile` an, von welcher anderen Datei es\nabgeleitet wurde. Umgekehrt **kann** über die Eigenschaft `derivativeFile` angezeigt werden, welche Ableitungen einer Datei existieren."
+      type: "object"
+      required:
+        - "id"
+        - "type"
+        - "accessUrl"
+      properties:
+        id:
+          type: "string"
+          format: "url"
+        type:
+          type: "string"
+          pattern: "^https://schema.oparl.org/1.1/File$"
+        name:
+          description: 'Ein zur Anzeige für Endnutzer bestimmter Name für dieses Objekt. Leerzeichen **dürfen** enthalten sein, Datei-Endungen wie ".pdf" **sollten nicht** enthalten sein.'
+          type: "string"
+        fileName:
+          description: 'Dateiname, unter dem die Datei in einem Dateisystem gespeichert werden kann. Beispiel: "einedatei.pdf". Da der Name den kompletten Unicode-Zeichenumfang nutzen kann, **sollten** Clients ggfs. selbst dafür sorgen, diesen beim Speichern in ein Dateisystem den lokalen Erfordernissen anzupassen.'
+          type: "string"
+        mimeType:
+          description: "MIME-Type der Datei ^[vgl. RFC2046: <http://tools.ietf.org/html/rfc2046>]."
+          type: "string"
+        date:
+          description: "Datum, welches als Startpunkt für Fristen u.ä. verwendet ist."
+          type: "string"
+          format: "date"
+        size:
+          description: "Größe der Datei in Bytes."
+          type: "integer"
+        sha1Checksum:
+          description: "[Veraltet] SHA1-Prüfsumme des Dateiinhalts in Hexadezimal-Schreibweise. Sollte nicht mehr verwendet werden, da sha1 als unsicher gilt. Stattdessen sollte `sha512checksum` verwendet werden."
+          type: "string"
+          deprecated: true
+        sha512Checksum:
+          description: "SHA512-Prüfsumme des Dateiinhalts in Hexadezimal-Schreibweise."
+          type: "string"
+        text:
+          description: "Reine Text-Wiedergabe des Dateiinhalts, sofern dieser in Textform wiedergegeben werden kann."
+          type: "string"
+        accessUrl:
+          description: "URL zum allgemeinen Zugriff auf die Datei. Näheres unter [Dateizugriffe](#dateizugriff)."
+          type: "string"
+          format: "url"
+        downloadUrl:
+          description: "URL zum Download der Datei. Näheres unter [Dateizugriffe](#dateizugriff)."
+          type: "string"
+          format: "url"
+        externalServiceUrl:
+          description: "Externe URL, welche eine zusätzliche Zugriffsmöglichkeit bietet. Beispiel: YouTube-Video."
+          type: "string"
+          format: "url"
+        masterFile:
+          description: "Datei, von der das aktuelle Objekt abgeleitet wurde. Details dazu in der allgemeinen Beschreibung weiter oben."
+          type: "string"
+          format: "url"
+        derivativeFile:
+          description: "Dateien, die von dem aktuellen Objekt abgeleitet wurden. Details dazu in der allgemeinen Beschreibung weiter oben."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        fileLicense:
+          description: "Lizenz, unter der die Datei angeboten wird. Wenn diese Eigenschaft nicht verwendet wird, ist der Wert von `license` beziehungsweise die Lizenz eines übergeordneten Objektes maßgeblich. Siehe [license](#eigenschaft_license)"
+          type: "string"
+          format: "url"
+        meeting:
+          description: "Rückreferenzen auf Meeting-Objekte. Wird nur dann ausgegeben, wenn das File-Objekt nicht als eingebettetes Objekt aufgerufen wird."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        agendaItem:
+          description: "Rückreferenzen auf AgendaItem-Objekte. Wird nur dann ausgegeben, wenn das File-Objekt nicht als eingebettetes Objekt aufgerufen wird."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        paper:
+          description: "Rückreferenzen auf Paper-Objekte. Wird nur dann ausgegeben, wenn das File-Objekt nicht als eingebettetes Objekt aufgerufen wird."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        license:
+          type: "string"
+        keyword:
+          type: "array"
+          items:
+            type: "string"
+        created:
+          type: "string"
+          format: "date-time"
+        modified:
+          type: "string"
+          format: "date-time"
+        web:
+          type: "string"
+          format: "url"
+        deleted:
+          type: "boolean"
+    Paper:
+      title: "Paper"
+      description: "Dieser Objekttyp dient der Abbildung von Drucksachen in der parlamentarischen Arbeit, wie zum Beispiel Anfragen, Anträgen und Beschlussvorlagen.\nDrucksachen werden in Form einer Beratung (oparl:Consultation) im Rahmen eines Tagesordnungspunkts (oparl:AgendaItem) einer Sitzung (oparl:Meeting) behandelt.\n\nDrucksachen spielen in der schriftlichen wie mündlichen Kommunikation eine besondere Rolle, da in vielen Texten auf bestimmte Drucksachen Bezug genommen wird. Hierbei kommen in parlamentarischen Informationssystemen in der Regel unveränderliche Kennungen der Drucksachen zum Einsatz."
+      type: "object"
+      required:
+        - "id"
+        - "type"
+      properties:
+        id:
+          type: "string"
+          format: "url"
+        type:
+          type: "string"
+          pattern: "^https://schema.oparl.org/1.1/Paper$"
+        body:
+          description: "Körperschaft, zu der die Drucksache gehört."
+          type: "string"
+          format: "url"
+        name:
+          description: "Titel der Drucksache."
+          type: "string"
+        reference:
+          description: "Kennung bzw. Aktenzeichen der Drucksache, mit der sie in der parlamentarischen Arbeit eindeutig referenziert werden kann."
+          type: "string"
+        date:
+          description: "Datum, welches als Startpunkt für Fristen u.ä. verwendet ist."
+          type: "string"
+          format: "date"
+        paperType:
+          description: "Art der Drucksache, z. B. Beantwortung einer Anfrage."
+          type: "string"
+        relatedPaper:
+          description: "Inhaltlich verwandte Drucksachen."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        superordinatedPaper:
+          description: "Übergeordnete Drucksachen."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        subordinatedPaper:
+          description: "Untergeordnete Drucksachen."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        mainFile:
+          description: "Die Hauptdatei zu dieser Drucksache. Beispiel: Die Drucksache repräsentiert eine Beschlussvorlage und die Hauptdatei enthält den Text der Beschlussvorlage. Sollte keine eindeutige Hauptdatei vorhanden sein, wird diese Eigenschaft nicht ausgegeben."
+          type: "object"
+          $ref: "#/components/schemas/File"
+        auxiliaryFile:
+          description: "Alle weiteren Dateien zur Drucksache ausgenommen der gegebenenfalls in `mainFile` angegebenen."
+          type: "array"
+          items:
+            $ref: "#/components/schemas/File"
+        location:
+          description: "Sofern die Drucksache einen inhaltlichen Ortsbezug hat, beschreibt diese Eigenschaft den Ort in Textform und/oder in Form von Geodaten."
+          type: "array"
+          items:
+            $ref: "#/components/schemas/Location"
+        originatorPerson:
+          description: "Urheber der Drucksache, falls der Urheber eine Person ist. Es können auch mehrere Personen angegeben werden."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        underDirectionOf:
+          description: "Federführung. Amt oder Abteilung, für die Inhalte oder Beantwortung der Drucksache verantwortlich."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        originatorOrganization:
+          description: "Urheber der Drucksache, falls der Urheber eine Gruppierung ist. Es können auch mehrere Gruppierungen angegeben werden."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        consultation:
+          description: "Beratungen der Drucksache."
+          type: "array"
+          items:
+            $ref: "#/components/schemas/Consultation"
+        license:
+          type: "string"
+        keyword:
+          type: "array"
+          items:
+            type: "string"
+        created:
+          type: "string"
+          format: "date-time"
+        modified:
+          type: "string"
+          format: "date-time"
+        web:
+          type: "string"
+          format: "url"
+        deleted:
+          type: "boolean"
+    Consultation:
+      title: "Consultation"
+      description: "Der Objekttyp `oparl:Consultation` dient dazu, die Beratung einer Drucksache ([`oparl:Paper`](#oparl_paper)) in einer Sitzung abzubilden. Dabei ist es nicht entscheidend, ob diese Beratung in der Vergangenheit stattgefunden hat oder diese für die Zukunft geplant ist.\nDie Gesamtheit aller Objekte des Typs `oparl:Consultation` zu einer bestimmten Drucksache bildet das ab, was in der Praxis als 'Beratungsfolge' der Drucksache bezeichnet wird."
+      type: "object"
+      required:
+        - "id"
+        - "type"
+      properties:
+        id:
+          type: "string"
+          format: "url"
+        type:
+          type: "string"
+          pattern: "^https://schema.oparl.org/1.1/Consultation$"
+        paper:
+          description: "Referenz auf das Paper, welche nur dann ausgegeben werden muss, wenn das Consultation-Objekt einzeln abgerufen wird, d.h. nicht Teil einer internen Ausgabe ist."
+          type: "string"
+          format: "url"
+        agendaItem:
+          description: "Referenz auf den Tagesordnungspunkt, unter dem die Drucksache beraten wird, welcher nur dann ausgegeben werden muss, wenn das Consultation-Objekt einzeln abgerufen wird, d.h. nicht Teil einer internen Ausgabe ist."
+          type: "string"
+          format: "url"
+        meeting:
+          description: "Referenz auf die Sitzung, in der die Drucksache beraten wird oder wurde, welche nur dann ausgegeben werden muss, wenn das Consultation-Objekt einzeln abgerufen wird, d.h. nicht Teil einer internen Ausgabe ist."
+          type: "string"
+          format: "url"
+        organization:
+          description: "Gremium, in dem die Drucksache beraten wird. Hier kann auch eine mit Liste von Gremien angegeben werden (die verschiedenen `oparl:Body` und `oparl:System` angehören können). Die Liste ist dann geordnet. Das erste Gremium der Liste ist federführend."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        authoritative:
+          description: "Drückt aus, ob bei dieser Beratung ein Beschluss zu der Drucksache gefasst wird oder wurde (`true`) oder nicht (`false`)."
+          type: "boolean"
+        role:
+          description: "Rolle oder Funktion der Beratung. Zum Beispiel Anhörung, Entscheidung, Kenntnisnahme, Vorberatung usw."
+          type: "string"
+        license:
+          type: "string"
+        keyword:
+          type: "array"
+          items:
+            type: "string"
+        created:
+          type: "string"
+          format: "date-time"
+        modified:
+          type: "string"
+          format: "date-time"
+        web:
+          type: "string"
+          format: "url"
+        deleted:
+          type: "boolean"
+    Meeting:
+      title: "Meeting"
+      description: "Eine Sitzung ist die Versammlung einer oder mehrerer Gruppierungen (oparl:Organization) zu einem bestimmten Zeitpunkt an einem bestimmten Ort.\n\nDie geladenen Teilnehmer der Sitzung sind jeweils als Objekte vom Typ oparl:Person, die in entsprechender Form referenziert werden. Verschiedene Dateien (Einladung, Ergebnis- und Wortprotokoll, sonstige Anlagen) können referenziert werden.\nDie Inhalte einer Sitzung werden durch Tagesordnungspunkte (oparl:AgendaItem) abgebildet."
+      type: "object"
+      required:
+        - "id"
+        - "type"
+      properties:
+        id:
+          type: "string"
+          format: "url"
+        type:
+          type: "string"
+          pattern: "^https://schema.oparl.org/1.1/Meeting$"
+        name:
+          description: "Name der Sitzung."
+          type: "string"
+        meetingState:
+          description: "Aktueller Status der Sitzung. **Empfohlen** ist die Verwendung von `terminiert` (geplant), `eingeladen` (vor der Sitzung bis zur Freigabe des Protokolls) und `durchgeführt` (nach Freigabe des Protokolls)."
+          type: "string"
+        cancelled:
+          description: "Wenn die Sitzung ausfällt, wird cancelled auf true gesetzt."
+          type: "boolean"
+        start:
+          description: "Datum und Uhrzeit des Anfangszeitpunkts der Sitzung. Bei einer zukünftigen Sitzung ist dies der geplante Zeitpunkt, bei einer stattgefundenen **kann** es der tatsächliche Startzeitpunkt sein."
+          type: "string"
+          format: "date-time"
+        end:
+          description: "Endzeitpunkt der Sitzung als Datum/Uhrzeit. Bei einer zukünftigen Sitzung ist dies der geplante Zeitpunkt, bei einer stattgefundenen **kann** es der tatsächliche Endzeitpunkt sein."
+          type: "string"
+          format: "date-time"
+        location:
+          description: "Sitzungsort."
+          type: "object"
+          $ref: "#/components/schemas/Location"
+        organization:
+          description: "Gruppierungen, denen die Sitzung zugeordnet ist. Im Regelfall wird hier eine Gruppierung verknüpft sein, es kann jedoch auch gemeinsame Sitzungen mehrerer Gruppierungen geben. Das erste Element **sollte** dann das federführende Gremium sein."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        participant:
+          description: "Personen, die an der Sitzung teilgenommen haben (d.h. nicht nur die eingeladenen Personen, sondern die tatsächlich anwesenden). Diese Eigenschaft kann selbstverständlich erst nach dem Stattfinden der Sitzung vorkommen."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        invitation:
+          description: "Einladungsdokument zur Sitzung."
+          type: "object"
+          $ref: "#/components/schemas/File"
+        resultsProtocol:
+          description: "Ergebnisprotokoll zur Sitzung. Diese Eigenschaft kann selbstverständlich erst nachdem Stattfinden der Sitzung vorkommen."
+          type: "object"
+          $ref: "#/components/schemas/File"
+        verbatimProtocol:
+          description: "Wortprotokoll zur Sitzung. Diese Eigenschaft kann selbstverständlich erst nach dem Stattfinden der Sitzung vorkommen."
+          type: "object"
+          $ref: "#/components/schemas/File"
+        auxiliaryFile:
+          description: "Dateianhang zur Sitzung. Hiermit sind Dateien gemeint, die üblicherweise mit der Einladung zu einer Sitzung verteilt werden, und die nicht bereits über einzelne Tagesordnungspunkte referenziert sind."
+          type: "array"
+          items:
+            $ref: "#/components/schemas/File"
+        agendaItem:
+          description: "Tagesordnungspunkte der Sitzung. Die Reihenfolge ist relevant. Es kann Sitzungen ohne TOPs geben."
+          type: "array"
+          items:
+            $ref: "#/components/schemas/AgendaItem"
+        license:
+          type: "string"
+        keyword:
+          type: "array"
+          items:
+            type: "string"
+        created:
+          type: "string"
+          format: "date-time"
+        modified:
+          type: "string"
+          format: "date-time"
+        web:
+          type: "string"
+          format: "url"
+        deleted:
+          type: "boolean"
+    Organization:
+      title: "Organization"
+      description: "Dieser Objekttyp dient dazu, Gruppierungen von Personen abzubilden, die in der parlamentarischen Arbeit eine Rolle spielen. Dazu zählen in der Praxis insbesondere Fraktionen und Gremien."
+      type: "object"
+      required:
+        - "id"
+        - "type"
+      properties:
+        id:
+          type: "string"
+          format: "url"
+        type:
+          type: "string"
+          pattern: "^https://schema.oparl.org/1.1/Organization$"
+        body:
+          description: "Körperschaft, zu der diese Gruppierung gehört."
+          type: "string"
+          format: "url"
+        name:
+          description: "Offizielle (lange) Form des Namens der Gruppierung."
+          type: "string"
+        membership:
+          description: "Mitgliedschaften dieser Gruppierung."
+          type: "array"
+          items:
+            type: "string"
+            format: "url"
+        meeting:
+          description: "URL auf eine externe Objektliste mit den Sitzungen dieser Gruppierung. Invers zur Eigenschaft `organization` der Klasse `oparl:Meeting`"
+          type: "string"
+          format: "url"
+        consultation:
+          description: "URL auf eine externe Objektliste mit den Beratungen dieser Gruppierung. Invers zur Eigenschaft `organization` der Klasse `oparl:Consultation`"
+          type: "string"
+          format: "url"
+        shortName:
+          description: "Der Name der Gruppierung als Kurzform."
+          type: "string"
+        post:
+          description: "Positionen, die für diese Gruppierung vorgesehen sind."
+          type: "array"
+          items:
+            type: "string"
+        subOrganizationOf:
+          description: "URL einer eventuellen übergeordneten Gruppierung."
+          type: "string"
+          format: "url"
+        organizationType:
+          description: "Grobe Kategorisierung der Gruppierung. Mögliche Werte sind 'Gremium', 'Partei', 'Fraktion', 'Verwaltungsbereich', 'externes Gremium', 'Institution' und 'Sonstiges'."
+          type: "string"
+        classification:
+          description: "Die Art der Gruppierung. In Frage kommen z.B. 'Parlament', 'Ausschuss', 'Beirat', 'Projektbeirat', 'Kommission', 'AG', 'Verwaltungsrat', 'Fraktion' oder 'Partei'. Die Angabe **sollte** möglichst präzise erfolgen. Außerdem **sollten** Abkürzungen vermieden werden. Für die höchste demokratische Instanz in der Kommune **sollte** immer der Begriff 'Parlament' verwendet werden, nicht 'Rat' oder 'Hauptausschuss'."
+          type: "string"
+        startDate:
+          description: "Gründungsdatum der Gruppierung. Kann z. B. das Datum der konstituierenden Sitzung sein."
+          type: "string"
+          format: "date"
+        endDate:
+          description: "Datum des letzten Tages der Existenz der Gruppierung."
+          type: "string"
+          format: "date"
+        website:
+          description: "Allgemeine Website der Gruppierung."
+          type: "string"
+          format: "url"
+        location:
+          description: "Ort, an dem die Organisation beheimatet ist"
+          type: "object"
+          $ref: "#/components/schemas/Location"
+        externalBody:
+          description: "Externer OParl Body, der dieser Organisation entspricht. Diese Eigenschaft ist dafür gedacht auf eventuelle konkretere OParl-Schnittstellen zu verweisen. Ein Beispiel hierfür wäre eine Stadt, die sowohl ein übergreifendes parlamentarisches Informationssystem, als auch bezirksspezifische Systeme hat."
+          type: "string"
+          format: "url"
+        license:
+          type: "string"
+        keyword:
+          type: "array"
+          items:
+            type: "string"
+        created:
+          type: "string"
+          format: "date-time"
+        modified:
+          type: "string"
+          format: "date-time"
+        web:
+          type: "string"
+          format: "url"
+        deleted:
+          type: "boolean"
+    Membership:
+      title: "Membership"
+      description: "Über Objekte dieses Typs wird die Mitgliedschaft von Personen in Gruppierungen dargestellt. Diese Mitgliedschaften können zeitlich begrenzt sein. Zudem kann abgebildet werden, dass eine Person eine bestimmte Rolle bzw. Position innerhalb der Gruppierung innehat, beispielsweise den Vorsitz einer Fraktion."
+      type: "object"
+      required:
+        - "id"
+        - "type"
+      properties:
+        id:
+          type: "string"
+          format: "url"
+        type:
+          type: "string"
+          pattern: "^https://schema.oparl.org/1.1/Membership$"
+        person:
+          description: "Rückreferenz auf Person, welches nur dann ausgegeben werden muss, wenn das Membership-Objekt einzeln abgerufen wird, d.h. nicht Teil einer internen Ausgabe ist."
+          type: "string"
+          format: "url"
+        organization:
+          description: "Die Gruppierung, in der die Person Mitglied ist oder war."
+          type: "string"
+          format: "url"
+        role:
+          description: "Rolle der Person für die Gruppierung. Kann genutzt werden, um verschiedene Arten von Mitgliedschaften zum Beispiel in Gremien zu unterscheiden."
+          type: "string"
+        votingRight:
+          description: "Gibt an, ob die Person in der Gruppierung stimmberechtigtes Mitglied ist."
+          type: "boolean"
+        startDate:
+          description: "Datum, an dem die Mitgliedschaft beginnt."
+          type: "string"
+          format: "date"
+        endDate:
+          description: "Datum, an dem die Mitgliedschaft endet."
+          type: "string"
+          format: "date"
+        onBehalfOf:
+          description: "Die Gruppierung, für die die Person in der unter `organization` angegebenen Organisation sitzt. Beispiel: Mitgliedschaft als Vertreter einer Ratsfraktion, einer Gruppierung oder einer externen Organisation."
+          type: "string"
+          format: "url"
+        license:
+          type: "string"
+        keyword:
+          type: "array"
+          items:
+            type: "string"
+        created:
+          type: "string"
+          format: "date-time"
+        modified:
+          type: "string"
+          format: "date-time"
+        web:
+          type: "string"
+          format: "url"
+        deleted:
+          type: "boolean"
+    Person:
+      title: "Person"
+      description: "Jede natürliche Person, die in der parlamentarischen Arbeit tätig und insbesondere\nMitglied in einer Gruppierung ([oparl:Organization](#oparl_organization)) ist, wird\nmit einem Objekt vom Typ `oparl:Person` abgebildet."
+      type: "object"
+      required:
+        - "id"
+        - "type"
+      properties:
+        id:
+          type: "string"
+          format: "url"
+        type:
+          type: "string"
+          pattern: "^https://schema.oparl.org/1.1/Person$"
+        body:
+          description: "Körperschaft, zu der die Person gehört."
+          type: "string"
+          format: "url"
+        name:
+          description: "Der vollständige Name der Person mit akademischem Grad und dem gebräuchlichen Vornamen,\nwie er zur Anzeige durch den Client genutzt werden kann."
+          type: "string"
+        familyName:
+          description: "Familienname bzw. Nachname."
+          type: "string"
+        givenName:
+          description: "Vorname bzw. Taufname."
+          type: "string"
+        formOfAddress:
+          description: "Anrede."
+          type: "string"
+        affix:
+          description: "Namenszusatz (z.B. `jun.` oder `MdL.`)"
+          type: "string"
+        title:
+          description: "Akademische Titel"
+          type: "array"
+          items:
+            type: "string"
+        gender:
+          description: "Geschlecht. Vorgegebene Werte sind `female` und `male`, weitere werden durch die durchgehend klein geschriebene englische Bezeichnung angegeben. Für den Fall, dass\ndas Geschlecht der Person unbekannt ist, **sollte** die Eigenschaft nicht ausgegeben werden."
+          type: "string"
+        phone:
+          description: "Telefonnummern der Person."
+          type: "array"
+          items:
+            type: "string"
+        email:
+          description: "E-Mail-Adressen der Person."
+          type: "array"
+          items:
+            type: "string"
+        location:
+          description: "Referenz der Kontakt-Anschrift der Person."
+          type: "string"
+          format: "url"
+        locationObject:
+          description: "Kontakt-Anschrift der Person. Wenn diese Eigenschaft ausgegeben wird, dann **muss**\nauch die Eigenschaft `location` ausgegeben werden und auf das gleiche Location-Objekt verweisen.\nDieses Feld sollte die eigentliche Ausgabeform von `location` in OParl 1.0 werden.\nvgl. https://github.com/OParl/spec/issues/373. Neu in OParl 1.1"
+          type: "object"
+          $ref: "#/components/schemas/Location"
+        status:
+          description: "Status, d.h. Rollen in der Kommune."
+          type: "array"
+          items:
+            type: "string"
+        membership:
+          description: "Mitgliedschaften der Person in Gruppierungen, z. B. Gremien und Fraktionen. Es **sollen**\nsowohl aktuelle als auch vergangene Mitgliedschaften angegeben werden"
+          type: "array"
+          items:
+            $ref: "#/components/schemas/Membership"
+        life:
+          description: "Kurzer Informationstext zur Person. Eine Länge von weniger als 300 Zeichen ist **empfohlen**"
+          type: "string"
+        lifeSource:
+          description: "Angabe der Quelle, aus der die Informationen für `life` stammen. Bei Angabe von `life` ist diese Eigenschaft **empfohlen**"
+          type: "string"
+        license:
+          type: "string"
+        keyword:
+          type: "array"
+          items:
+            type: "string"
+        created:
+          type: "string"
+          format: "date-time"
+        modified:
+          type: "string"
+          format: "date-time"
+        web:
+          type: "string"
+          format: "url"
+        deleted:
+          type: "boolean"
+
+    # ExternalList
+    Pagination:
+      type: object
+      properties:
+        elementsPerPage:
+          type: integer
+        currentPage:
+          type: integer
+        totalElements:
+          type: integer
+        totalPages:
+          type: integer
+    Links:
+      type: object
+      properties:
+        first:
+          type: string
+          format: uri
+        prev:
+          type: string
+          format: uri
+        self:
+          type: string
+          format: uri
+        next:
+          type: string
+          format: uri
+        last:
+          type: string
+          format: uri
+        web:
+          type: string
+          format: uri
+  parameters:
+    BodyId:
+      name: bodyId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: "Die eindeutige ID des Body, zu dem die Organisationen gehören."
+    Page:
+      in: query
+      name: page
+      schema:
+        type: integer
+        default: 1
+      description: Seitennummer der Ergebnisse.
+    CreatedSince:
+      in: query
+      name: created_since
+      description: Beschränkt die Ergebnisse auf Objekte, die nach diesem Datum erstellt wurden.
+      required: false
+      schema:
+        type: string
+        format: date-time
+    CreatedUntil:
+      in: query
+      name: created_until
+      description: Beschränkt die Ergebnisse auf Objekte, die vor diesem Datum erstellt wurden.
+      required: false
+      schema:
+        type: string
+        format: date-time
+    ModifiedSince:
+      in: query
+      name: modified_since
+      description: Beschränkt die Ergebnisse auf Objekte, die nach diesem Datum modifiziert wurden. Wenn gesetzt, müssen auch gelöschte Objekte ausgegeben werden.
+      required: false
+      schema:
+        type: string
+        format: date-time
+    ModifiedUntil:
+      in: query
+      name: modified_until
+      description: Beschränkt die Ergebnisse auf Objekte, die vor diesem Datum modifiziert wurden.
+      required: false
+      schema:
+        type: string
+        format: date-time
+    OmitInternal:
+      in: query
+      name: omit_internal
+      description: Wenn gesetzt mit dem Wert true, verzichtet der Server auf die Ausgabe von internen Listen.
+      required: false
+      schema:
+        type: boolean
+    Limit:
+      in: query
+      name: limit
+      description: Begrenzt die Anzahl der Objekte pro Listen­seite. Nicht garantiert, dass der Server sich daran hält.
+      required: false
+      schema:
+        type: integer
